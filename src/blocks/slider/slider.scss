@@ -1,0 +1,94 @@
+$sliderHeight: 1000px - 54px;
+$paginatorHeight: 73px;
+$contentHeight: $sliderHeight - $paginatorHeight;
+
+.slider {
+    height: $sliderHeight;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr $paginatorHeight;
+
+    &__wrapper {
+        width: 1200px;
+        overflow: hidden;
+    }
+
+    &__content {
+        display: inline-flex;
+        height: $contentHeight;
+        transition: transform ease 1s;
+        transform: translate(-25%);
+    }
+
+    &__slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1200px;
+    }
+
+    &__header {
+        font-family: Kaushan Script;
+        font-size: 72px;
+        color: white;
+        text-align: center;
+        padding: 0 100px;
+    }
+
+    &__info {
+        font-family: Montserrat;
+        font-size: 150px;
+        line-height: 140px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        padding: 0 100px;
+    }
+
+    &__paginator {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: 280px;
+
+        &--active .slider__progress {
+            opacity: 100%;
+        }
+
+        &--active .slider__bar {
+            transition: transform linear 10s;
+            transform: translate(0);
+        }
+
+        &--active .slider__page {
+            opacity: 100%;
+        }
+    }
+
+    &__progress {
+        height: 3px;
+        overflow: hidden;
+        background-color: white;
+        opacity: 50%;
+    }
+
+    &__bar {
+        height: 100%;
+        background-color: #f38181;
+        transform: translate(-100%);
+    }
+
+    &__page {
+        font-family: Montserrat;
+        font-size: 18px;
+        color: white;
+        opacity: 70%;
+    }
+
+    &__number {
+        font-weight: bold;
+        font-size: 24px;
+    }
+}
