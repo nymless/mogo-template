@@ -16,8 +16,28 @@ $contentHeight: $sliderHeight - $paginatorHeight;
     &__content {
         display: inline-flex;
         height: $contentHeight;
-        transition: transform ease 1s;
-        transform: translate(-25%);
+
+        &-forward {
+            transform: translate(0);
+    
+            &--next {
+                transition: transform ease 1s;
+                transform: translate(-50%);
+            }
+        }
+
+        &-backward {
+            transform: translate(-50%);
+    
+            &--prev {
+                transition: transform ease 1s;
+                transform: translate(0);
+            }
+        }
+    }
+
+    &__slides {
+        display: none;
     }
 
     &__slide {
