@@ -10,56 +10,54 @@
             rel="stylesheet"
         />
         <link
-            href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+            href="https://fonts.googleapis.com/css?family=Montserrat:regular,700"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:regular,700"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="./styles/main.min.css" />
     </head>
     <body>
         <div class="wrapper">
-            <div class="banner">
+            <div class="background">
                 <img
-                    src="./img/mogo-banner.png"
+                    class="background__img"
+                    src="./img/background-mogo-banner.png"
                     alt="mogo-banner"
-                    class="banner__background"
                 />
                 <div class="content">
                     <header class="header">
-                        <div class="logo">MoGo</div>
+                        <div class="logo header__logo">MoGo</div>
                         <nav class="menu">
                             <ul class="menu__list">
                                 <li class="menu__item">
-                                    <a class="menu__link" href="#">ABOUT</a>
+                                    <a class="menu__link" href="#"> ABOUT </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="menu__link" href="#">SERVICE</a>
+                                    <a class="menu__link" href="#"> SERVICE </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="menu__link" href="#">WORK</a>
+                                    <a class="menu__link" href="#"> WORK </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="menu__link" href="#">BLOG</a>
+                                    <a class="menu__link" href="#"> BLOG </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="menu__link" href="#">CONTACT</a>
+                                    <a class="menu__link" href="#"> CONTACT </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="#">
+                                        <div class="menu__img-cart"></div>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="#">
+                                        <div class="menu__img-search"></div>
+                                    </a>
                                 </li>
                             </ul>
-                            <div class="menu__inner">
-                                <a class="menu__link" href="#">
-                                    <img
-                                        class="menu__img"
-                                        src="./img/shopping-cart.png"
-                                        alt="shopping-cart"
-                                    />
-                                </a>
-                                <a class="menu__link" href="#">
-                                    <img
-                                        class="menu__img"
-                                        src="./img/magnifying-glass.png"
-                                        alt="search"
-                                    />
-                                </a>
-                            </div>
                         </nav>
                     </header>
                     <div class="slider">
@@ -79,42 +77,44 @@
                                 <div class="slider__slide">
                                     <div class="slider__inner">
                                         <div class="slider__header">
-                                            Work is awesome
+                                            We work with
                                         </div>
                                         <div class="slider__info">
-                                            MOGO IS BEST
+                                            AMAZING SERVICES
                                         </div>
                                     </div>
                                 </div>
                                 <div class="slider__slide">
                                     <div class="slider__inner">
                                         <div class="slider__header">
-                                            Anything about
+                                            Who we are
                                         </div>
                                         <div class="slider__info">
-                                            MOGO IS GREAT
+                                            MEET OUR TEAM
                                         </div>
                                     </div>
                                 </div>
                                 <div class="slider__slide">
                                     <div class="slider__inner">
                                         <div class="slider__header">
-                                            Contact us
+                                            Always in touch
                                         </div>
                                         <div class="slider__info">
-                                            CONTACTS HERE
+                                            CONTACT US
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="underline slider__underline"></div>
+                        <a class="slider__more" href="#"> LEARN MORE </a>
                         <div class="slider__paginator">
                             <div class="slider__item">
                                 <div class="slider__progress">
                                     <div class="slider__bar"></div>
                                 </div>
                                 <div class="slider__page">
-                                    <span class="slider__number"> 01 </span>
+                                    <span class="slider__number">01 </span>
                                     INTRO
                                 </div>
                             </div>
@@ -123,7 +123,7 @@
                                     <div class="slider__bar"></div>
                                 </div>
                                 <div class="slider__page">
-                                    <span class="slider__number"> 02 </span>
+                                    <span class="slider__number">02 </span>
                                     WORK
                                 </div>
                             </div>
@@ -132,7 +132,7 @@
                                     <div class="slider__bar"></div>
                                 </div>
                                 <div class="slider__page">
-                                    <span class="slider__number"> 03 </span>
+                                    <span class="slider__number">03 </span>
                                     ABOUT
                                 </div>
                             </div>
@@ -141,7 +141,7 @@
                                     <div class="slider__bar"></div>
                                 </div>
                                 <div class="slider__page">
-                                    <span class="slider__number"> 04 </span>
+                                    <span class="slider__number">04 </span>
                                     CONTACTS
                                 </div>
                             </div>
@@ -149,6 +149,353 @@
                     </div>
                 </div>
             </div>
+            <main class="main">
+                <section class="story">
+                    <div class="content story__content">
+                        <div class="heading story__heading">
+                            <div class="heading__1st">What we do</div>
+                            <div class="heading__2nd">STORY ABOUT US</div>
+                        </div>
+                        <div
+                            class="underline underline--colored story__underline"
+                        ></div>
+                        <div class="story__body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat.
+                        </div>
+                        <div class="story__tiles">
+                            <div class="story__tile">
+                                <img
+                                    class="story__tile-img"
+                                    src="./img/story-tile-1.png"
+                                    alt=""
+                                />
+                                <div class="story__gradient">
+                                    <div class="story__tile-info">
+                                        <img
+                                            class="story__tile-icon"
+                                            src="./img/story-super-team.png"
+                                            alt=""
+                                        />
+                                        SUPER TEAM
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="story__tile">
+                                <img
+                                    class="story__tile-img"
+                                    src="./img/story-tile-2.png"
+                                    alt=""
+                                />
+                                <div class="story__gradient">
+                                    <div class="story__tile-info">
+                                        <img
+                                            class="story__tile-icon"
+                                            src="./img/story-super-team.png"
+                                            alt=""
+                                        />
+                                        SUPER TEAM
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="story__tile">
+                                <img
+                                    class="story__tile-img"
+                                    src="./img/story-tile-3.png"
+                                    alt=""
+                                />
+                                <div class="story__gradient">
+                                    <div class="story__tile-info">
+                                        <img
+                                            class="story__tile-icon"
+                                            src="./img/story-super-team.png"
+                                            alt=""
+                                        />
+                                        SUPER TEAM
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="background background--colored">
+                    <section class="achievements">
+                        <div class="content achievements__content">
+                            <div class="achievements__achievement">
+                                <div class="achievements__number">42</div>
+                                <div class="achievements__description">
+                                    WEB DESIGN PROJECTS
+                                </div>
+                            </div>
+                            <div class="achievements__achievement">
+                                <div class="achievements__number">123</div>
+                                <div class="achievements__description">
+                                    HAPPY CLIENTS
+                                </div>
+                            </div>
+                            <div class="achievements__achievement">
+                                <div class="achievements__number">15</div>
+                                <div class="achievements__description">
+                                    AWARD WINNER
+                                </div>
+                            </div>
+                            <div class="achievements__achievement">
+                                <div class="achievements__number">99</div>
+                                <div class="achievements__description">
+                                    CUP OF COFFEE
+                                </div>
+                            </div>
+                            <div class="achievements__achievement">
+                                <div class="achievements__number">24</div>
+                                <div class="achievements__description">
+                                    MEMBERS
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <section class="overview">
+                    <div class="content overview__content">
+                        <div class="heading overview__heading">
+                            <div class="heading__1st">We work with</div>
+                            <div class="heading__2nd">Amazing services</div>
+                        </div>
+                        <div
+                            class="underline underline--colored overview__underline"
+                        ></div>
+                        <div class="overview__tiles">
+                            <div class="overview__tile">
+                                <img
+                                    class="overview__tile-icon"
+                                    src="./img/overview-alarm.png"
+                                    alt="alarm"
+                                />
+                                <div class="overview__tile-heading">
+                                    Photography
+                                </div>
+                                <div class="overview__tile-info">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor.
+                                </div>
+                            </div>
+                            <div class="overview__tile">
+                                <img
+                                    class="overview__tile-icon"
+                                    src="./img/overview-line-graph.png"
+                                    alt="line graph"
+                                />
+                                <div class="overview__tile-heading">
+                                    Web Design
+                                </div>
+                                <div class="overview__tile-info">
+                                    Ipsum dolor sit amet, consectetur adipiscing
+                                    elit, sed do eiusmod tempor.
+                                </div>
+                            </div>
+                            <div class="overview__tile">
+                                <img
+                                    class="overview__tile-icon"
+                                    src="./img/overview-computer-ok.png"
+                                    alt="computer ok"
+                                />
+                                <div class="overview__tile-heading">
+                                    Creativity
+                                </div>
+                                <div class="overview__tile-info">
+                                    Dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor.
+                                </div>
+                            </div>
+                            <div class="overview__tile">
+                                <img
+                                    class="overview__tile-icon"
+                                    src="./img/overview-book.png"
+                                    alt="book"
+                                />
+                                <div class="overview__tile-heading">SEO</div>
+                                <div class="overview__tile-info">
+                                    Ipsum dolor sit amet, consectetur adipiscing
+                                    elit, sed do eiusmod.
+                                </div>
+                            </div>
+                            <div class="overview__tile">
+                                <img
+                                    class="overview__tile-icon"
+                                    src="./img/overview-home.png"
+                                    alt="home"
+                                />
+                                <div class="overview__tile-heading">
+                                    CSS/HTML
+                                </div>
+                                <div class="overview__tile-info">
+                                    Lorem dolor sit amet, consectetur adipiscing
+                                    elit, sed do tempor.
+                                </div>
+                            </div>
+                            <div class="overview__tile">
+                                <img
+                                    class="overview__tile-icon"
+                                    src="./img/overview-image.png"
+                                    alt="image"
+                                />
+                                <div class="overview__tile-heading">
+                                    Digital
+                                </div>
+                                <div class="overview__tile-info">
+                                    Sit amet, consectetur adipiscing elit, sed
+                                    do eiusmod tempor.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="background">
+                    <img
+                        class="background__img"
+                        src="./img/background-design.png"
+                        alt="design-banner"
+                    />
+                    <section class="design">
+                        <div class="content design__content">
+                            <div class="heading design__heading">
+                                <div class="heading__1st">For all devices</div>
+                                <div class="heading__2nd">Unique design</div>
+                            </div>
+                            <div
+                                class="underline underline--colored design__underline"
+                            ></div>
+                            <div class="design__images">
+                                <img
+                                    class="design__img-1"
+                                    src="./img/design-display-768x1024.png"
+                                    alt="iPad"
+                                />
+                                <img
+                                    class="design__img-2"
+                                    src="./img/design-display-375x667.png"
+                                    alt="iPhone"
+                                />
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <section class="service">
+                    <div class="content service__content">
+                        <div class="heading service__heading">
+                            <div class="heading__1st">Service</div>
+                            <div class="heading__2nd">What we do</div>
+                        </div>
+                        <div
+                            class="underline underline--colored service__underline"
+                        ></div>
+                        <div class="service__body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat.
+                        </div>
+                        <div class="service__tiles">
+                            <img
+                                class="service__img"
+                                src="./img/service-photo-wall.png"
+                                alt="photo wall"
+                            />
+                            <div class="accordion service__accordion">
+                                <div
+                                    class="accordion__item accordion__item--active"
+                                >
+                                    <div class="accordion__item-head">
+                                        Photography
+                                    </div>
+                                    <div class="accordion__item-body scrollbar">
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna
+                                        aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit
+                                        in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint
+                                        occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt mollit anim
+                                        id est laborum. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat.
+                                    </div>
+                                </div>
+                                <div class="accordion__item">
+                                    <div class="accordion__item-head">
+                                        Creativity
+                                    </div>
+                                    <div class="accordion__item-body">
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna
+                                        aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit
+                                        in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint
+                                        occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt mollit anim
+                                        id est laborum. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat.
+                                    </div>
+                                </div>
+                                <div class="accordion__item">
+                                    <div class="accordion__item-head">
+                                        Web design
+                                    </div>
+                                    <div class="accordion__item-body">
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna
+                                        aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit
+                                        in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint
+                                        occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt mollit anim
+                                        id est laborum. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="teamm">
+                    <div class="content"></div>
+                </section>
+                <section class="works">
+                    <div class="content"></div>
+                </section>
+                <section class="clients">
+                    <div class="content"></div>
+                </section>
+                <section class="blog">
+                    <div class="content"></div>
+                </section>
+                <section class="contacts">
+                    <div class="content"></div>
+                </section>
+            </main>
+            <footer class="footer">
+                <!-- <div class="content">
+                    &#9400; 2016 MoGo free PSD template by
+                    <a href="https://dribbble.com/laaqiq">Laaqiq</a>
+                </div> -->
+            </footer>
         </div>
         <script src="./js/app.min.js"></script>
     </body>

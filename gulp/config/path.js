@@ -23,7 +23,10 @@ export const path = {
             `${srcFolder}/js/app.js`, 
             `${srcFolder}/blocks/**/*.js`
         ],
-        images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
+        images: [
+            `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
+            `${srcFolder}/blocks/**/*.{jpg,jpeg,png,gif,webp}`
+        ],
         svg: `${srcFolder}/img/**/*.svg`,
         svgicons: `${srcFolder}/svgicons/*.svg`,
     },
@@ -37,7 +40,10 @@ export const path = {
             `${srcFolder}/js/app.js`, 
             `${srcFolder}/blocks/**/*.js`
         ],
-        images: `${srcFolder}/img/*.{jpg,jpeg,png,gif,webp,svg,ico}`,
+        images: [
+            `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg,ico}`,
+            `${srcFolder}/blocks/**/*.{jpg,jpeg,png,gif,webp,svg,ico}`
+        ],
     },
     clean: buildFolder,
     buildFolder: buildFolder,

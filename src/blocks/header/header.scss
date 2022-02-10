@@ -1,6 +1,12 @@
+$headerHeight: 64px;
+
 .header {
+    height: $headerHeight;
     display: flex;
-    justify-content: space-between;
     align-items: flex-end;
-    height: 54px;
+    justify-content: space-between;
+
+    &__logo {
+        margin-bottom: 6px;
+    }
 }

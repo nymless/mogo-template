@@ -21,6 +21,7 @@
         "gulp-clean-css": "latest",
         "gulp-concat": "^2.6.1",
         "gulp-file-include": "latest",
+        "gulp-flatten": "^0.4.0",
         "gulp-fonter": "latest",
         "gulp-group-css-media-queries": "latest",
         "gulp-if": "latest",

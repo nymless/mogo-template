@@ -1,0 +1,13 @@
+.background {
+    position: relative;
+
+    &__img {
+        display: block;
+        z-index: -9999;
+        position: absolute
+    }
+
+    &--colored {
+        background-color: #95e1d3;
+    }
+}

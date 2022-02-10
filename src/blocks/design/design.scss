@@ -1,0 +1,38 @@
+.design {
+    height: 850px;
+
+    &__content {
+        height: 100%;
+        display: grid;
+        grid-template-rows: 185px 38px 1fr;
+    }
+
+    &__heading {
+        display: grid;
+        grid-template-rows: 1fr 46px;
+        align-items: end;
+    }
+
+    &__underline {
+        display: flex;
+        align-self: flex-end;
+        margin: 0 auto;
+    }
+
+    &__images {
+        margin: 45px auto 0;
+        padding-right: 54px;
+        position: relative;
+    }
+
+    &__img-1 {
+        display: block;
+    }
+
+    &__img-2 {
+        display: block;
+        position: absolute;
+        top: 197px;
+        left: 362px;
+    }
+}

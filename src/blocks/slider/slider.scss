@@ -1,15 +1,18 @@
-$sliderHeight: 1000px - 54px;
+$sliderWidth: 1200px;
+$sliderHeight: 1000px - 64px;
+$underlineHeight: 53px;
+$moreHeight: 197px;
 $paginatorHeight: 73px;
-$contentHeight: $sliderHeight - $paginatorHeight;
+$contentHeight: $sliderHeight - $paginatorHeight - $moreHeight - $underlineHeight;
 
 .slider {
     height: $sliderHeight;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr $paginatorHeight;
+    grid-template-rows: $contentHeight $underlineHeight $moreHeight $paginatorHeight;
+    width: $sliderWidth;
 
     &__wrapper {
-        width: 1200px;
         overflow: hidden;
     }
 
@@ -41,10 +44,13 @@ $contentHeight: $sliderHeight - $paginatorHeight;
     }
 
     &__slide {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 1200px;
+        margin: 0 auto;
+        padding-top: 146px;
+        width: $sliderWidth;
+    }
+
+    &__inner {
+        padding: 0 100px;
     }
 
     &__header {
@@ -52,7 +58,6 @@ $contentHeight: $sliderHeight - $paginatorHeight;
         font-size: 72px;
         color: white;
         text-align: center;
-        padding: 0 100px;
     }
 
     &__info {
@@ -62,7 +67,32 @@ $contentHeight: $sliderHeight - $paginatorHeight;
         font-weight: bold;
         color: white;
         text-align: center;
-        padding: 0 100px;
+        padding-top: 27px;
+    }
+
+    &__underline {
+        margin: 0 auto;
+    }
+
+    &__more {
+        width: 160px;
+        height: 40px;
+        border: 3px solid white;
+        box-sizing: border-box;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        margin: 0 auto;
+
+        &:hover {
+            border-color: #fce38a;
+            cursor: pointer;
+        }
     }
 
     &__paginator {
@@ -72,6 +102,7 @@ $contentHeight: $sliderHeight - $paginatorHeight;
 
     &__item {
         width: 280px;
+        cursor: pointer;
 
         &--active .slider__progress {
             opacity: 100%;
@@ -105,10 +136,14 @@ $contentHeight: $sliderHeight - $paginatorHeight;
         font-size: 18px;
         color: white;
         opacity: 70%;
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
 
     &__number {
         font-weight: bold;
         font-size: 24px;
+        white-space: pre-wrap;
     }
 }

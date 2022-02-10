@@ -1,0 +1,38 @@
+.service {
+    height: 900px;
+
+    &__content {
+        height: 100%;
+        display: grid;
+        grid-template-rows: 185px 38px 89px 1fr;
+    }
+    &__heading {
+        display: grid;
+        grid-template-rows: 1fr 46px;
+        align-items: end;
+    }
+    &__underline {
+        display: flex;
+        align-self: flex-end;
+        margin: 0 auto;
+    }
+    &__body {
+        font-family: "Roboto";
+        font-size: 15px;
+        line-height: 1.6;
+        text-align: center;
+        padding: 0 123px;
+        display: flex;
+        align-self: flex-end;
+    }
+
+    &__tiles {
+        padding-top: 88px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__img {
+        display: block;
+    }
+}

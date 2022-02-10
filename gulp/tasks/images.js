@@ -1,5 +1,6 @@
 import webp from "gulp-webp";
 import imagemin from "gulp-imagemin";
+import flatten from "gulp-flatten";
 
 export const images = () => {
     return app.gulp
@@ -14,6 +15,7 @@ export const images = () => {
         )
         .pipe(app.plugins.newer(app.path.build.images))
         .pipe(app.plugins.if(app.isBuild, webp()))
+        .pipe(flatten())
         .pipe(app.plugins.if(app.isBuild, app.gulp.dest(app.path.build.images)))
         .pipe(app.plugins.if(app.isBuild, app.gulp.src(app.path.src.images)))
         .pipe(
@@ -33,6 +35,7 @@ export const images = () => {
                 })
             )
         )
+        .pipe(flatten())
         .pipe(app.gulp.dest(app.path.build.images))
         .pipe(app.gulp.src(app.path.src.svg))
         .pipe(app.gulp.dest(app.path.build.images))
