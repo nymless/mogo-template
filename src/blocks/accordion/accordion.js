@@ -28,3 +28,7 @@ accordion.addEventListener("click", (event) => {
 
     accordionState.activeItemIndex = targetItemIndex;
 });
+
+document.querySelectorAll(".accordion__item-body").forEach((elem) => {
+    new SimpleBar(elem, { autoHide: false });
+});
