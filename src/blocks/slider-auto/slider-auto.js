@@ -1,10 +1,10 @@
-const slider = document.querySelector(".slider");
-const paginator = slider.querySelector(".slider__paginator");
-const firstItem = paginator.querySelector(".slider__item");
+const slider = document.querySelector(".slider-auto");
+const paginator = slider.querySelector(".slider-auto__paginator");
+const firstItem = paginator.querySelector(".slider-auto__item");
 
-const content = slider.querySelector(".slider__content");
-const slides = slider.querySelectorAll(".slider__slide");
-const items = slider.querySelectorAll(".slider__item");
+const content = slider.querySelector(".slider-auto__content");
+const slides = slider.querySelectorAll(".slider-auto__slide");
+const items = slider.querySelectorAll(".slider-auto__item");
 
 let prevTargetItem = null;
 
@@ -22,29 +22,29 @@ if (slides.length === items.length) {
 
 // click on slider controls
 paginator.addEventListener("click", (event) => {
-    const targetItem = event.target.closest(".slider__item");
+    const targetItem = event.target.closest(".slider-auto__item");
 
-    if (targetItem.classList.contains("slider__item--active")) {
+    if (targetItem.classList.contains("slider-auto__item--active")) {
         return;
     }
 
     // remove "--active" from "slider__item"
-    paginator.querySelectorAll(".slider__item").forEach((item) => {
-        if (item.classList.contains("slider__item--active")) {
-            item.classList.remove("slider__item--active");
+    paginator.querySelectorAll(".slider-auto__item").forEach((item) => {
+        if (item.classList.contains("slider-auto__item--active")) {
+            item.classList.remove("slider-auto__item--active");
             // save prevItem
             prevTargetItem = item;
         }
     });
 
     // add "--active" to "slider__item"
-    targetItem.classList.add("slider__item--active");
+    targetItem.classList.add("slider-auto__item--active");
 
     // clear "slider__content"
-    content.classList.remove("slider__content-forward--next");
-    content.classList.remove("slider__content-forward");
-    content.classList.remove("slider__content-backward--prev");
-    content.classList.remove("slider__content-backward");
+    content.classList.remove("slider-auto__content-forward--next");
+    content.classList.remove("slider-auto__content-forward");
+    content.classList.remove("slider-auto__content-backward--prev");
+    content.classList.remove("slider-auto__content-backward");
 
     // clear "slider__content" from all child nodes
     while (content.firstChild) {
@@ -64,14 +64,14 @@ paginator.addEventListener("click", (event) => {
         if (targetItem.dataset.index < prevTargetItem.dataset.index) {
             content.append(nextSlide, prevSlide);
             // add mix of "slider__content-backward" and "slider__content"
-            content.classList.add("slider__content-backward");
+            content.classList.add("slider-auto__content-backward");
         }
 
         // forward clicked
         if (targetItem.dataset.index > prevTargetItem.dataset.index) {
             content.append(prevSlide, nextSlide);
             // add mix of "slider__content-forward" and "slider__content"
-            content.classList.add("slider__content-forward");
+            content.classList.add("slider-auto__content-forward");
         }
     }
 });
@@ -83,21 +83,21 @@ paginator.addEventListener("transitionstart", () => {
     }
 
     // add modifiers to "slider__content"
-    if (content.classList.contains("slider__content-forward")) {
-        content.classList.add("slider__content-forward--next");
+    if (content.classList.contains("slider-auto__content-forward")) {
+        content.classList.add("slider-auto__content-forward--next");
     }
 
-    if (content.classList.contains("slider__content-backward")) {
-        content.classList.add("slider__content-backward--prev");
+    if (content.classList.contains("slider-auto__content-backward")) {
+        content.classList.add("slider-auto__content-backward--prev");
     }
 });
 
 paginator.addEventListener("transitionend", (event) => {
-    const targetItem = event.target.closest(".slider__item");
+    const targetItem = event.target.closest(".slider-auto__item");
 
     // clear "slider__content"
-    content.classList.remove("slider__content-forward--next");
-    content.classList.remove("slider__content-backward--prev");
+    content.classList.remove("slider-auto__content-forward--next");
+    content.classList.remove("slider-auto__content-backward--prev");
 
     // auto-slide loop
     if (targetItem.nextElementSibling) {
