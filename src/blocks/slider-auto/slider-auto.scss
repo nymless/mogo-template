@@ -1,28 +1,17 @@
-$sliderWidth: 1200px;
-$sliderHeight: 1000px - 64px;
-$underlineHeight: 53px;
-$moreHeight: 197px;
-$paginatorHeight: 73px;
-$contentHeight: $sliderHeight - $paginatorHeight - $moreHeight - $underlineHeight;
-
 .slider-auto {
-    height: $sliderHeight;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: $contentHeight $underlineHeight $moreHeight $paginatorHeight;
-    width: $sliderWidth;
+    width: 1200px;
 
     &__wrapper {
+        margin-top: 162px;
         overflow: hidden;
     }
 
     &__content {
         display: inline-flex;
-        height: $contentHeight;
 
         &-forward {
             transform: translate(0);
-    
+
             &--next {
                 transition: transform ease 1s;
                 transform: translate(-50%);
@@ -31,7 +20,7 @@ $contentHeight: $sliderHeight - $paginatorHeight - $moreHeight - $underlineHeigh
 
         &-backward {
             transform: translate(-50%);
-    
+
             &--prev {
                 transition: transform ease 1s;
                 transform: translate(0);
@@ -45,8 +34,7 @@ $contentHeight: $sliderHeight - $paginatorHeight - $moreHeight - $underlineHeigh
 
     &__slide {
         margin: 0 auto;
-        padding-top: 146px;
-        width: $sliderWidth;
+        width: 1200px;
     }
 
     &__inner {
@@ -54,40 +42,34 @@ $contentHeight: $sliderHeight - $paginatorHeight - $moreHeight - $underlineHeigh
     }
 
     &__header {
-        font-family: Kaushan Script;
-        font-size: 72px;
+        font: 72px/1.2 'Kaushan Script', cursive;
         color: white;
         text-align: center;
     }
 
     &__info {
-        font-family: Montserrat;
-        font-size: 150px;
-        line-height: 140px;
-        font-weight: bold;
+        margin-top: 35px;
+        font: bold 150px/0.933 Montserrat, sans-serif;
         color: white;
         text-align: center;
-        padding-top: 27px;
     }
 
     &__underline {
-        margin: 0 auto;
+        margin: 48px auto 0;
     }
 
     &__more {
+        margin: 58px auto 0;
         width: 160px;
         height: 40px;
         border: 3px solid white;
         box-sizing: border-box;
-        font-family: Montserrat;
-        font-size: 14px;
-        font-weight: bold;
+        font: bold 14px/1.2 Montserrat, sans-serif;
         color: white;
         display: flex;
         align-items: center;
         justify-content: center;
         text-decoration: none;
-        margin: 0 auto;
 
         &:hover {
             border-color: #fce38a;
@@ -96,6 +78,8 @@ $contentHeight: $sliderHeight - $paginatorHeight - $moreHeight - $underlineHeigh
     }
 
     &__paginator {
+        margin-top: 157px;
+        height: 73px;
         display: flex;
         justify-content: space-between;
     }
@@ -132,8 +116,7 @@ $contentHeight: $sliderHeight - $paginatorHeight - $moreHeight - $underlineHeigh
     }
 
     &__page {
-        font-family: Montserrat;
-        font-size: 18px;
+        font: 500 18px/1.2 Montserrat, sans-serif;
         color: white;
         opacity: 70%;
         height: 100%;
@@ -144,6 +127,7 @@ $contentHeight: $sliderHeight - $paginatorHeight - $moreHeight - $underlineHeigh
     &__number {
         font-weight: bold;
         font-size: 24px;
+        line-height: 1.2;
         white-space: pre-wrap;
     }
 }

@@ -16,6 +16,10 @@
 
         &--active {
             height: 240px;
+
+            & .accordion__head-arrow {
+                transform: rotate(180deg);
+            }
         }
     }
 
@@ -27,36 +31,45 @@
         background-color: white;
         cursor: pointer;
         position: absolute;
-        display: flex;
-        padding-left: 15px;
-        gap: 12px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 12px;
+        padding: 0 20px 0 15px;
+        justify-content: space-between;
         align-items: center;
         z-index: 2;
     }
 
-    &__head-img {
+    &__head-icon {
         display: block;
         height: 32px;
     }
 
     &__head-text {
-        font: bold 14px "Montserrat";
+        font: bold 14px/1.2 Montserrat, sans-serif;
         text-transform: uppercase;
-        color: rgb(51, 51, 51);
+        color: #333333;
+    }
+
+    &__head-arrow {
+        display: block;
     }
 
     &__item-body {
+        margin: 0;
         height: 140px;
-        font: italic 15px/1.6 "Roboto";
-        color: rgb(153, 153, 153);
+        font: italic 15px/1.6 Roboto, sans-serif;
+        color: #999999;
     }
 
-    .simplebar-track.simplebar-vertical {
+    // Simplebar plugin classes
+
+    .simplebar-vertical {
         background-color: #f5f5f5;
         width: 5px;
         border-radius: 3px;
     }
-    
+
     .simplebar-scrollbar::before {
         background-color: #95e1d3;
         top: 0;
@@ -65,7 +78,7 @@
         right: 0;
         opacity: 1;
     }
-    
+
     .simplebar-content-wrapper {
         padding-right: 25px;
     }

@@ -1,37 +1,25 @@
 .story {
-    &__content {
-        height: 750px;
-        display: grid;
-        grid-template-rows: 167px 36px 1fr 370px;
-        justify-items: center;
-    }
+    display: grid;
+    justify-items: center;
 
     &__heading {
-        display: grid;
-        grid-template-rows: 1fr 45px;
-        justify-items: center;
-        align-items: flex-end;
+        margin-top: 90px;
     }
 
-    &__underline {
-        display: flex;
-        align-self: flex-end;
-    }
-
-    &__body {
-        font-family: Roboto;
-        font-size: 15px;
-        line-height: 24px;
+    &__paragraph {
+        margin: 40px 0 0;
+        padding: 0 123px;
+        font: 15px/1.6 Roboto, sans-serif;
         text-align: center;
-        padding: 42px 123px 0;
+        color: #999999;
     }
 
     &__tiles {
+        margin-top: 97px;
+        margin-bottom: 110px;
         width: 100%;
         display: flex;
         justify-content: space-between;
-        padding-top: 10px;
-        padding-bottom: 110px;
     }
 
     &__tile {
@@ -60,12 +48,14 @@
     &__tile-img {
         position: absolute;
         display: block;
+        transition: all 0.5s ease;
     }
 
     &__gradient {
         position: absolute;
         width: 100%;
         height: 100%;
+        transition: all 0.5s ease;
     }
 
     &__tile-info {
@@ -74,9 +64,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -40%);
-        font-family: Montserrat;
-        font-size: 18px;
-        font-weight: bold;
+        font: bold 18px/1.2 Montserrat, sans-serif;
         color: white;
     }
 

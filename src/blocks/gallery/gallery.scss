@@ -1,0 +1,54 @@
+.gallery {
+    margin-top: 98px;
+    columns: 4;
+    gap: 0;
+
+    &__photo {
+        position: relative;
+
+        &:hover .gallery__gradient {
+            display: flex;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#f38181, #fce38a);
+            opacity: 90%;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__image {
+        display: block;
+    }
+
+    &__gradient {
+        display: none;
+    }
+
+    &__info {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+
+    &__icon {
+        display: block;
+        margin-top: 26px;
+    }
+
+    &__heading {
+        margin: 18px 0 0;
+        font: 14px/1.2 Montserrat, sans-serif;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    &__paragraph {
+        margin: 8px 0 0;
+        font: italic 300 15px/1.6 Roboto, sans-serif;
+        color: white;
+    }
+}

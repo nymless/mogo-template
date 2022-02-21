@@ -1,10 +1,19 @@
 .background {
-    position: relative;
+    &--main {
+        background: #f38181 url('../img/background-mogo-banner.png') center
+            no-repeat;
+    }
 
-    &__img {
-        display: block;
-        z-index: -9999;
-        position: absolute
+    &--nature {
+        background: #f8f8f8 url('../img/background-design.png') center no-repeat;
+    }
+
+    &--mountains {
+        background: #f8f8f8 url('../img/background-clients.png') center no-repeat;
+    }
+
+    &--map {
+        background: #f8f8f8 url('../img/background-map.png') center no-repeat;
     }
 
     &--turquoise {

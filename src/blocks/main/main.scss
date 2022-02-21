@@ -1,0 +1,21 @@
+.main {
+    &__slider-1 {
+        height: 290px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__slider-2 {
+        margin-top: 100px;
+        margin-bottom: 130px;
+    }
+
+    &__footer {
+        display: grid;
+        grid-template-columns: 39.9% 1fr 22.6%;
+        column-gap: 30px;
+        align-items: end;
+        padding: 65px 0 69px;
+        border-bottom: 1px solid #e8e8e8;
+    }
+}

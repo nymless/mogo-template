@@ -1,27 +1,14 @@
 .design {
-    height: 850px;
-
-    &__content {
-        height: 100%;
-        display: grid;
-        grid-template-rows: 185px 38px 1fr;
-    }
+    display: grid;
+    justify-items: center;
 
     &__heading {
-        display: grid;
-        grid-template-rows: 1fr 46px;
-        align-items: end;
-    }
-
-    &__underline {
-        display: flex;
-        align-self: flex-end;
-        margin: 0 auto;
+        margin-top: 108px;
     }
 
     &__images {
-        margin: 45px auto 0;
-        padding-right: 54px;
+        margin-top: 45px;
+        margin-right: 54px;
         position: relative;
     }
 

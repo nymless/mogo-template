@@ -1,0 +1,32 @@
+.instagram-article {
+    &__heading {
+        margin: 0 0 37px;
+        font: 600 14px/1.2 Montserrat, sans-serif;
+        color: #333333;
+        text-transform: uppercase;
+    }
+
+    &__photos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2px;
+    }
+
+    &__photo {
+        display: block;
+    }
+
+    &__more {
+        margin-top: 14px;
+    }
+
+    &__link {
+        font: italic 300 13px/1 Roboto, sans-serif;
+        text-decoration: none;
+        color: #333333;
+
+        &:hover {
+            color: #f38181;
+        }
+    }
+}

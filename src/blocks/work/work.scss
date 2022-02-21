@@ -1,0 +1,16 @@
+.works {
+    display: grid;
+    justify-items: center;
+
+    &__heading {
+        margin-top: 109px;
+    }
+
+    &__paragraph {
+        margin: 41px 0 0;
+        padding: 0 123px;
+        font: 15px/1.6 Roboto, sans-serif;
+        text-align: center;
+        color: #999999;
+    }
+}

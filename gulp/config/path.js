@@ -14,10 +14,10 @@ export const path = {
         fonts: `${buildFolder}/fonts/`,
     },
     src: {
-        html: `${srcFolder}/index.html`,
+        html: `${srcFolder}/*.html`,
         scss: [
-            `${srcFolder}/styles/main.scss`,
-            `${srcFolder}/blocks/**/*.scss`,
+            `${srcFolder}/styles/**/*.{css,scss}`,
+            `${srcFolder}/blocks/**/*.{css,scss}`,
         ],
         script: [
             `${srcFolder}/js/app.js`, 
@@ -28,16 +28,15 @@ export const path = {
             `${srcFolder}/blocks/**/*.{jpg,jpeg,png,gif,webp}`
         ],
         svg: `${srcFolder}/img/**/*.svg`,
-        svgicons: `${srcFolder}/svgicons/*.svg`,
     },
     watch: {
         html: `${srcFolder}/**/*.html`,
         scss: [
-            `${srcFolder}/styles/main.scss`,
-            `${srcFolder}/blocks/**/*.scss`,
+            `${srcFolder}/styles/**/*.{css,scss}`,
+            `${srcFolder}/blocks/**/*.{css,scss}`,
         ],
         script: [
-            `${srcFolder}/js/app.js`, 
+            `${srcFolder}/js/**/*.js`, 
             `${srcFolder}/blocks/**/*.js`
         ],
         images: [
@@ -49,5 +48,4 @@ export const path = {
     buildFolder: buildFolder,
     srcFolder: srcFolder,
     rootFolder: rootFolder,
-    ftp: "", // folder on FTP sever for build extraction
 };

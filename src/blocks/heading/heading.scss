@@ -1,16 +1,20 @@
 .heading {
-    &__1st {
-        font-size: 24px;
-        font-family: "Kaushan Script";
-        color: rgb(51, 51, 51);
+    &__2nd {
+        margin: 0;
+        font: 400 24px/1.2 'Kaushan Script', cursive;
+        color: #333333;
         text-align: center;
     }
-    &__2nd {
-        font-size: 30px;
-        font-family: "Montserrat";
-        color: rgb(51, 51, 51);
-        font-weight: bold;
+
+    &__3rd {
+        margin: 12px 0 0;
+        font: bold 30px/1.2 Montserrat, sans-serif;
+        color: #333333;
         text-transform: uppercase;
         text-align: center;
+    }
+
+    &__underline {
+        margin: 35px auto 0;
     }
 }

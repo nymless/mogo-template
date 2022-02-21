@@ -1,0 +1,32 @@
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 200px;
+
+    &__link {
+        margin-top: 57px;
+        display: grid;
+        justify-items: center;
+        font: bold 24px/1.2 Montserrat, sans-serif;
+        color: #f38181;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:hover {
+            .map__underline {
+                display: block;
+            }
+        }
+    }
+
+    &__pin {
+        margin-bottom: 13px;
+        display: block;
+    }
+
+    &__underline {
+        display: none;
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,13 @@
+.footer {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 600 14px/1.2 Montserrat, sans-serif;
+    color: #333333;
+
+    &__author {
+        text-decoration: none;
+        color: #f38181;
+    }
+}

@@ -1,12 +1,10 @@
-$headerHeight: 64px;
-
 .header {
-    height: $headerHeight;
+    min-height: 58px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
 
     &__logo {
-        margin-bottom: 6px;
+        margin-bottom: 2px;
     }
 }

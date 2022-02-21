@@ -1,0 +1,56 @@
+.clients {
+    display: grid;
+    justify-items: center;
+
+    &__heading {
+        margin-top: 109px;
+    }
+
+    &__tiles {
+        margin-top: 86px;
+        margin-bottom: 125px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 66px;
+    }
+
+    &__client {
+        display: grid;
+        grid-template-columns: 170px 1fr;
+    }
+
+    &__photo {
+        display: flex;
+        justify-self: center;
+        object-fit: contain;
+        margin-left: 20px;
+    }
+
+    &__quote {
+        margin: 0;
+        padding: 0 20px 0 10px;
+    }
+
+    &__name {
+        margin-top: 9px;
+        font: bold 14px/1.2 Montserrat, sans-serif;
+        color: #333333;
+        text-transform: uppercase;
+    }
+
+    &__position {
+        margin-top: 7px;
+        font: italic 15px/1.6 Roboto, sans-serif;
+        color: #333333;
+    }
+
+    &__underline {
+        margin-top: 14px;
+    }
+
+    &__paragraph {
+        margin: 19px 0 0;
+        font: 15px/1.6 Roboto, sans-serif;
+        color: #999999;
+    }
+}

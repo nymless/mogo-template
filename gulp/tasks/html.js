@@ -1,6 +1,7 @@
-import fileInclude from "gulp-file-include";
-import webpHtmlNosvg from "gulp-webp-html-nosvg";
-import versionNumber from "gulp-version-number";
+import fileInclude from 'gulp-file-include';
+import webpHtmlNosvg from 'gulp-webp-html-nosvg';
+import versionNumber from 'gulp-version-number';
+import prettier from 'gulp-prettier';
 
 export const html = () => {
     return app.gulp
@@ -8,30 +9,30 @@ export const html = () => {
         .pipe(
             app.plugins.plumber(
                 app.plugins.notify.onError({
-                    title: "HTML",
-                    message: "Error: <%= error.message %>",
+                    title: 'HTML',
+                    message: 'Error: <%= error.message %>',
                 })
             )
         )
         .pipe(fileInclude())
-        .pipe(app.plugins.replace("@img/", "./img/"))
         .pipe(app.plugins.if(app.isBuild, webpHtmlNosvg()))
         .pipe(
             app.plugins.if(
                 app.isBuild,
                 versionNumber({
-                    value: "%DT%",
+                    value: '%DT%',
                     append: {
-                        key: "_v",
+                        key: '_v',
                         cover: 0,
-                        to: ["css", "js"],
+                        to: ['css', 'js'],
                     },
                     output: {
-                        file: "gulp/version.json",
+                        file: 'gulp/version.json',
                     },
                 })
             )
         )
+        .pipe(prettier({ tabWidth: 4 }))
         .pipe(app.gulp.dest(app.path.build.html))
         .pipe(app.plugins.browsersync.stream());
 };

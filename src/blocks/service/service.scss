@@ -1,33 +1,20 @@
 .service {
-    height: 900px;
+    margin-top: 109px;
+    margin-bottom: 120px;
+    display: grid;
+    justify-items: center;
 
-    &__content {
-        height: 100%;
-        display: grid;
-        grid-template-rows: 185px 38px 89px 1fr;
-    }
-    &__heading {
-        display: grid;
-        grid-template-rows: 1fr 46px;
-        align-items: end;
-    }
-    &__underline {
-        display: flex;
-        align-self: flex-end;
-        margin: 0 auto;
-    }
-    &__body {
-        font-family: "Roboto";
-        font-size: 15px;
-        line-height: 1.6;
-        text-align: center;
+    &__paragraph {
+        margin: 41px 0 0;
         padding: 0 123px;
-        display: flex;
-        align-self: flex-end;
+        font: 15px/1.6 Roboto, sans-serif;
+        text-align: center;
+        color: #999999;
     }
 
     &__tiles {
-        padding-top: 88px;
+        margin-top: 88px;
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
     }

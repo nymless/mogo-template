@@ -1,36 +1,28 @@
-$achievementsHeight: 270px;
-
 .achievements {
-    height: $achievementsHeight;
-
-    &__content {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        height: 100%;
-    }
+    height: 270px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 
     &__achievement {
-        padding-top: 70px;
-        border-left: 1px solid rgba($color: #ffffff, $alpha: 0.3);
+        margin-top: 71px;
+        border-left: 1px solid rgba($color: white, $alpha: 0.3);
 
         &:last-child {
-            border-right: 1px solid rgba($color: #ffffff, $alpha: 0.3);
+            border-right: 1px solid rgba($color: white, $alpha: 0.3);
         }
     }
 
     &__number {
-        font-family: "Montserrat";
-        font-weight: bold;
-        font-size: 72px;
+        font: bold 72px/1.2 Montserrat, sans-serif;
         color: white;
         text-align: center;
     }
 
     &__description {
-        padding-top: 8px;
-        font-family: "Montserrat";
-        font-size: 14px;
+        margin-top: 10px;
+        font: 500 14px/1.2 Montserrat, sans-serif;
         color: white;
         text-align: center;
+        text-transform: uppercase;
     }
 }
