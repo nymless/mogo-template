@@ -1,7 +1,7 @@
 .blogs-article {
     &__heading {
         margin: 0 0 37px;
-        font: 600 14px/1.2 Montserrat, sans-serif;
+        font: 600 14px/1.2 $montserrat-font;
         color: #333333;
         text-transform: uppercase;
     }
@@ -23,14 +23,14 @@
 
     &__blog-heading {
         margin: 0 0 1px;
-        font: 600 12px/1.5 Montserrat, sans-serif;
+        font: 600 12px/1.5 $montserrat-font;
         color: #333333;
         text-transform: uppercase;
     }
 
     &__blog-date {
         margin-bottom: 2px;
-        font: italic 300 13px/1.846 Roboto, sans-serif;
+        font: italic 300 13px/1.846 $roboto-font;
         color: #999999;
     }
 }

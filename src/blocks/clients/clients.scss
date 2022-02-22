@@ -1,14 +1,14 @@
 .clients {
-    display: grid;
-    justify-items: center;
+    background: #f8f8f8 url('../img/background-clients.png') center;
+    background-size: cover;
 
     &__heading {
-        margin-top: 109px;
+        padding-top: 109px;
     }
 
     &__tiles {
         margin-top: 86px;
-        margin-bottom: 125px;
+        padding-bottom: 125px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         row-gap: 66px;
@@ -33,14 +33,14 @@
 
     &__name {
         margin-top: 9px;
-        font: bold 14px/1.2 Montserrat, sans-serif;
+        font: bold 14px/1.2 $montserrat-font;
         color: #333333;
         text-transform: uppercase;
     }
 
     &__position {
         margin-top: 7px;
-        font: italic 15px/1.6 Roboto, sans-serif;
+        font: italic 15px/1.6 $roboto-font;
         color: #333333;
     }
 
@@ -50,7 +50,7 @@
 
     &__paragraph {
         margin: 19px 0 0;
-        font: 15px/1.6 Roboto, sans-serif;
+        font: 15px/1.6 $roboto-font;
         color: #999999;
     }
 }

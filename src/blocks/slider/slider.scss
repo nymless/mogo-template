@@ -22,7 +22,7 @@
 
     &__paragraph {
         margin: 0;
-        font: italic 300 24px/1.5 Roboto, sans-serif;
+        font: italic 300 24px/1.5 $roboto-font;
         color: #999999;
     }
 
@@ -37,7 +37,7 @@
     }
 
     &__author {
-        font: 24px/1.2 'Kaushan Script', cursive;
+        font: 24px/1.2 $kaushanScript-font;
         color: #333333;
     }
 

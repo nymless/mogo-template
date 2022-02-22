@@ -1,8 +1,9 @@
-.slider-auto {
-    width: 1200px;
+.main-slider {
+    background: #f38181 url('../img/background-mogo-banner.png') center;
+    background-size: cover;
 
     &__wrapper {
-        margin-top: 162px;
+        padding-top: 162px;
         overflow: hidden;
     }
 
@@ -35,6 +36,13 @@
     &__slide {
         margin: 0 auto;
         width: 1200px;
+
+        @include breakpoint(xl) {
+            width: 970px;
+        }
+        @include breakpoint(lg) {
+            width: 750px;
+        }
     }
 
     &__inner {
@@ -42,16 +50,30 @@
     }
 
     &__header {
-        font: 72px/1.2 'Kaushan Script', cursive;
+        font: 72px/1.2 $kaushanScript-font;
         color: white;
         text-align: center;
+
+        @include breakpoint(xl) {
+            font-size: calc(72px / 1.2);
+        }
+        @include breakpoint(lg) {
+            font-size: calc(72px / 1.6);
+        }
     }
 
     &__info {
         margin-top: 35px;
-        font: bold 150px/0.933 Montserrat, sans-serif;
+        font: bold 150px/0.933 $montserrat-font;
         color: white;
         text-align: center;
+
+        @include breakpoint(xl) {
+            font-size: calc(150px / 1.2);
+        }
+        @include breakpoint(lg) {
+            font-size: calc(150px / 1.6);
+        }
     }
 
     &__underline {
@@ -64,7 +86,7 @@
         height: 40px;
         border: 3px solid white;
         box-sizing: border-box;
-        font: bold 14px/1.2 Montserrat, sans-serif;
+        font: bold 14px/1.2 $montserrat-font;
         color: white;
         display: flex;
         align-items: center;
@@ -81,6 +103,7 @@
         margin-top: 157px;
         height: 73px;
         display: flex;
+        gap: 27px;
         justify-content: space-between;
     }
 
@@ -88,16 +111,16 @@
         width: 280px;
         cursor: pointer;
 
-        &--active .slider-auto__progress {
+        &--active .main-slider__progress {
             opacity: 100%;
         }
 
-        &--active .slider-auto__bar {
+        &--active .main-slider__bar {
             transition: transform linear 10s;
             transform: translate(0);
         }
 
-        &--active .slider-auto__page {
+        &--active .main-slider__page {
             opacity: 100%;
         }
     }
@@ -116,18 +139,23 @@
     }
 
     &__page {
-        font: 500 18px/1.2 Montserrat, sans-serif;
+        font: 500 18px/1.2 $montserrat-font;
         color: white;
         opacity: 70%;
         height: 100%;
-        display: flex;
-        align-items: center;
+
+        @include breakpoint(lg) {
+            font-size: calc(18px / 1.2);
+        }
     }
 
     &__number {
         font-weight: bold;
         font-size: 24px;
         line-height: 1.2;
-        white-space: pre-wrap;
+
+        @include breakpoint(lg) {
+            font-size: calc(24px / 1.2);
+        }
     }
 }

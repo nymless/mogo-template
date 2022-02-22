@@ -1,7 +1,5 @@
 .team {
     margin-bottom: 114px;
-    display: grid;
-    justify-items: center;
 
     &__heading {
         margin-top: 98px;
@@ -10,7 +8,7 @@
     &__paragraph {
         margin: 41px 0 0;
         padding: 0 123px;
-        font: 15px/1.6 Roboto, sans-serif;
+        font: 15px/1.6 $roboto-font;
         text-align: center;
         color: #999999;
     }
@@ -38,7 +36,7 @@
 
             .team__card-gradient {
                 transform: translate(-10px, -10px);
-                background: linear-gradient(#f38181, #fce38a);
+                background: $hover-gradient;
                 opacity: 90%;
             }
 
@@ -133,7 +131,7 @@
 
     &__card-name {
         text-align: center;
-        font: bold 14px/1.2 "Montserrat";
+        font: bold 14px/1.2 $montserrat-font;
         color: rgb(51, 51, 51);
         text-transform: uppercase;
     }
@@ -141,7 +139,7 @@
     &__card-position {
         margin-top: 6px;
         text-align: center;
-        font: italic 15px/1.6 "Roboto";
+        font: italic 15px/1.6 $roboto-font;
         color: rgb(153, 153, 153);
     }
 }

@@ -1,10 +1,23 @@
 .footer {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font: 600 14px/1.2 Montserrat, sans-serif;
-    color: #333333;
+    background-color: $bg-gray;
+
+    &__bloks {
+        display: grid;
+        grid-template-columns: 39.9% 1fr 22.6%;
+        column-gap: 30px;
+        align-items: end;
+        padding: 65px 0 69px;
+        border-bottom: 1px solid #e8e8e8;
+    }
+
+    &__end {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font: 600 14px/1.2 $montserrat-font;
+        color: #333333;
+    }
 
     &__author {
         text-decoration: none;

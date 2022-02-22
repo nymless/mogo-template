@@ -1,7 +1,4 @@
 .blogs {
-    display: grid;
-    justify-items: center;
-
     &__heading {
         margin-top: 108px;
     }
@@ -47,23 +44,23 @@
     }
 
     &__day {
-        font: bold 30px/1 Montserrat, sans-serif;
+        font: bold 30px/1 $montserrat-font;
     }
 
     &__month {
-        font: italic 300 15px/1.2 Roboto, sans-serif;
+        font: italic 300 15px/1.2 $roboto-font;
     }
 
     &__heading-4 {
         margin: 17px 0 0;
-        font: 600 14px/1.2 Montserrat, sans-serif;
+        font: 600 14px/1.2 $montserrat-font;
         color: #333333;
         text-transform: uppercase;
     }
 
     &__paragraph {
         margin: 11px 0 0;
-        font: 15px/1.6 Roboto, sans-serif;
+        font: 15px/1.6 $roboto-font;
         color: #999999;
         border-bottom: 1px solid #e5e5e5;
         padding-bottom: 16px;
@@ -74,7 +71,7 @@
         display: flex;
         align-items: center;
         gap: 19px;
-        font: italic 300 15px/1.6 Roboto, sans-serif;
+        font: italic 300 15px/1.6 $roboto-font;
         color: #999999;
     }
 

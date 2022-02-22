@@ -1,7 +1,5 @@
 .overview {
     margin-top: 108px;
-    display: grid;
-    justify-items: center;
 
     &__tiles {
         margin-top: 18px;
@@ -37,7 +35,7 @@
         margin-bottom: 11px;
         display: flex;
         align-items: flex-end;
-        font: 600 14px/1.2 Montserrat, sans-serif;
+        font: 600 14px/1.2 $montserrat-font;
         color: #333333;
         text-transform: uppercase;
     }
@@ -46,7 +44,7 @@
         grid-area: info;
         margin: 0;
         margin-right: 20px;
-        font: 15px/1.6 Roboto, sans-serif;
+        font: 15px/1.6 $roboto-font;
         color: #999999;
     }
 }

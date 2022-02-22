@@ -1,8 +1,8 @@
-import webpack from "webpack-stream"; // webpack плагин для gulp (требует установку npm webpack)
+import webpack from "webpack-stream";
 
 export const script = () => {
     return app.gulp
-        .src(app.path.src.script, { sourcemaps: app.isDev }) // {карта исходников} для того чтобы при возниконовении ошибки понимать в каком файле
+        .src(app.path.src.script, { sourcemaps: app.isDev })
         .pipe(
             app.plugins.plumber(
                 app.plugins.notify.onError({

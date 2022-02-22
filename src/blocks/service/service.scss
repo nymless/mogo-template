@@ -1,13 +1,11 @@
 .service {
     margin-top: 109px;
     margin-bottom: 120px;
-    display: grid;
-    justify-items: center;
 
     &__paragraph {
         margin: 41px 0 0;
         padding: 0 123px;
-        font: 15px/1.6 Roboto, sans-serif;
+        font: 15px/1.6 $roboto-font;
         text-align: center;
         color: #999999;
     }

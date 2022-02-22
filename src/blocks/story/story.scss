@@ -1,7 +1,4 @@
 .story {
-    display: grid;
-    justify-items: center;
-
     &__heading {
         margin-top: 90px;
     }
@@ -9,7 +6,7 @@
     &__paragraph {
         margin: 40px 0 0;
         padding: 0 123px;
-        font: 15px/1.6 Roboto, sans-serif;
+        font: 15px/1.6 $roboto-font;
         text-align: center;
         color: #999999;
     }
@@ -20,12 +17,19 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+
+        @include breakpoint(xl) {
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
 
     &__tile {
         position: relative;
         width: 380px;
         height: 250px;
+        flex: 0 0 auto;
 
         &:hover {
             .story__tile-img {
@@ -35,7 +39,7 @@
 
             .story__gradient {
                 transform: translate(-10px, -10px);
-                background: linear-gradient(#f38181, #fce38a);
+                background: $hover-gradient;
                 opacity: 90%;
             }
 
@@ -43,6 +47,8 @@
                 display: block;
             }
         }
+
+
     }
 
     &__tile-img {
@@ -64,7 +70,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -40%);
-        font: bold 18px/1.2 Montserrat, sans-serif;
+        font: bold 18px/1.2 $montserrat-font;
         color: white;
     }
 

@@ -1,9 +1,14 @@
 .design {
-    display: grid;
-    justify-items: center;
+    background: #f8f8f8 url('../img/background-design.png') center;
+    background-size: cover;
+
+    &__container {
+        display: grid;
+        justify-content: center;
+    }
 
     &__heading {
-        margin-top: 108px;
+        padding-top: 108px;
     }
 
     &__images {

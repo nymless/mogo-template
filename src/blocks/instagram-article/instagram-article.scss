@@ -1,7 +1,7 @@
 .instagram-article {
     &__heading {
         margin: 0 0 37px;
-        font: 600 14px/1.2 Montserrat, sans-serif;
+        font: 600 14px/1.2 $montserrat-font;
         color: #333333;
         text-transform: uppercase;
     }
@@ -21,7 +21,7 @@
     }
 
     &__link {
-        font: italic 300 13px/1 Roboto, sans-serif;
+        font: italic 300 13px/1 $roboto-font;
         text-decoration: none;
         color: #333333;
 

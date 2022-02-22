@@ -1,5 +1,5 @@
 import fileInclude from 'gulp-file-include';
-import webpHtmlNosvg from 'gulp-webp-html-nosvg';
+import gulpHtmlImgWrapper from 'gulp-html-img-wrapper';
 import versionNumber from 'gulp-version-number';
 import prettier from 'gulp-prettier';
 
@@ -15,7 +15,15 @@ export const html = () => {
             )
         )
         .pipe(fileInclude())
-        .pipe(app.plugins.if(app.isBuild, webpHtmlNosvg()))
+        .pipe(
+            app.plugins.if(
+                app.isBuild,
+                gulpHtmlImgWrapper({
+                    classMove: false,
+                    extensions: ['.jpg', '.png', '.jpeg'],
+                })
+            )
+        )
         .pipe(
             app.plugins.if(
                 app.isBuild,

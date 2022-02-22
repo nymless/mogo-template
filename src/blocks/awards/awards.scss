@@ -1,7 +1,11 @@
 .awards {
-    height: 250px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 10px;
+    background-color: $bg-gray;
+
+    &__container {
+        height: 250px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 10px;
+    }
 }

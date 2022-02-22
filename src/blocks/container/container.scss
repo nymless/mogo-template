@@ -1,4 +1,17 @@
 .container {
-    max-width: 1200px;
+    max-width: 1230px;
     margin: 0 auto;
+    padding: 0px 15px;
+
+    @include breakpoint(xl) {
+        max-width: 970px;
+    }
+    @include breakpoint(lg) {
+        max-width: 750px;
+    }
+    @include breakpoint(md) {
+        max-width: none;
+    }
+    @include breakpoint(sm) {
+    }
 }

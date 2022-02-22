@@ -1,6 +1,6 @@
 const accordions = document.querySelectorAll('.accordion');
 
-const accordionState = Array(accordions.length).fill(0);
+const accordionState = Array(accordions.length).fill({ activeItemIndex: 0 });
 
 document.body.addEventListener('click', (event) => {
     if (!event.target.closest('.accordion__item-head')) {
@@ -15,15 +15,15 @@ document.body.addEventListener('click', (event) => {
     }
 
     let targetAccordionIndex;
-    
+
     Array.from(accordions).forEach((item, index) => {
         if (item === targetAccordion) {
             targetAccordionIndex = index;
         }
     });
-    
+
     targetAccordion.children[
-        accordionState[targetAccordionIndex]
+        accordionState[targetAccordionIndex].activeItemIndex
     ].classList.remove('accordion__item--active');
 
     targetItem.classList.add('accordion__item--active');
@@ -36,7 +36,7 @@ document.body.addEventListener('click', (event) => {
         }
     });
 
-    accordionState[targetAccordionIndex] = activeItemIndex;
+    accordionState[targetAccordionIndex].activeItemIndex = activeItemIndex;
 });
 
 document.querySelectorAll('.accordion__item-body').forEach((elem) => {

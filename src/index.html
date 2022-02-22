@@ -6,18 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>MoGo</title>
         <link
-            href="https://fonts.googleapis.com/css?family=Kaushan+Script:regular"
-            rel="stylesheet"
-        />
-        <link
-            href="https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700"
-            rel="stylesheet"
-        />
-        <link
-            href="https://fonts.googleapis.com/css?family=Roboto:300,regular,700"
-            rel="stylesheet"
-        />
-        <link
             rel="stylesheet"
             href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
         />
@@ -36,74 +24,25 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="background background--main">
-                <div class="container">
-                    @@include('blocks/header/header.html')
-                    @@include('blocks/slider-auto/slider-auto.html')
-                </div>
-            </div>
+            @@include('blocks/header/header.html')
             <main class="main">
-                <div class="container">
-                    @@include('blocks/story/story.html')
-                </div>
-                <div class="background background--turquoise">
-                    <div class="container">
-                        @@include('blocks/achievements/achievements.html')
-                    </div>
-                </div>
-                <div class="container">
-                    @@include('blocks/overview/overview.html')
-                </div>
-                <div class="background background--nature">
-                    <div class="container">
-                        @@include('blocks/design/design.html')
-                    </div>
-                </div>
-                <div class="container">
-                    @@include('blocks/service/service.html')
-                </div>
-                <div class="background background--gray">
-                    <div class="container main__slider-1">
-                        @@include('blocks/slider-1/slider-1.html')
-                    </div>
-                </div>
-                <div class="container">@@include('blocks/team/team.html')</div>
-                <div class="background background--gray">
-                    <div class="container">
-                        @@include('blocks/awards/awards.html')
-                    </div>
-                </div>
-                <div class="container">@@include('blocks/work/work.html')</div>
+                @@include('blocks/main-slider/main-slider.html')
+                @@include('blocks/story/story.html')
+                @@include('blocks/achievements/achievements.html')
+                @@include('blocks/overview/overview.html')
+                @@include('blocks/design/design.html')
+                @@include('blocks/service/service.html')
+                @@include('blocks/slider-1/slider-1.html')
+                @@include('blocks/team/team.html')
+                @@include('blocks/awards/awards.html')
+                @@include('blocks/work/work.html')
                 @@include('blocks/gallery/gallery.html')
-                <div class="container main__slider-2">
-                    @@include('blocks/slider-2/slider-2.html')
-                </div>
-                <div class="background background--mountains">
-                    <div class="container">
-                        @@include('blocks/clients/clients.html')
-                    </div>
-                </div>
-                <div class="container">
-                    @@include('blocks/blogs/blogs.html')
-                </div>
-                <div class="background background--map">
-                    <div class="container">
-                        @@include('blocks/map/map.html')
-                    </div>
-                </div>
-                <div class="background background--gray">
-                    <div class="container main__footer">
-                        @@include('blocks/social-networks/social-networks.html')
-                        @@include('blocks/blogs-article/blogs-article.html')
-                        @@include('blocks/instagram-article/instagram-article.html')
-                    </div>
-                </div>
+                @@include('blocks/slider-2/slider-2.html')
+                @@include('blocks/clients/clients.html')
+                @@include('blocks/blogs/blogs.html')
+                @@include('blocks/map/map.html')
             </main>
-            <div class="background background--gray">
-                <div class="container">
-                    @@include('blocks/footer/footer.html')
-                </div>
-            </div>
+            @@include('blocks/footer/footer.html')
         </div>
         <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
         <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>

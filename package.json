@@ -1,5 +1,5 @@
 {
-    "name": "mogo",
+    "name": "mogo-template",
     "version": "1.0.0",
     "description": "",
     "main": "gulpfile.js",
@@ -21,6 +21,7 @@
         "gulp-flatten": "^0.4.0",
         "gulp-fonter": "^0.3.0",
         "gulp-group-css-media-queries": "^1.2.2",
+        "gulp-html-img-wrapper": "^2.1.3",
         "gulp-if": "^3.0.0",
         "gulp-imagemin": "^8.0.0",
         "gulp-newer": "^1.4.0",
@@ -33,7 +34,6 @@
         "gulp-ttf2woff2": "^4.0.1",
         "gulp-version-number": "^0.2.4",
         "gulp-webp": "^4.0.1",
-        "gulp-webp-html-nosvg": "^1.0.5",
         "gulp-webpcss": "^1.1.1",
         "prettier": "^2.5.1",
         "sass": "^1.49.7",
