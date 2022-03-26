@@ -1,56 +1,85 @@
 .clients {
-    background: #f8f8f8 url('../img/background-clients.png') center;
-    background-size: cover;
+  background: #f8f8f8 url('../img/clints/background-clients.png') center;
+  background-size: cover;
 
-    &__heading {
-        padding-top: 109px;
-    }
+  &__heading {
+    padding-top: 109px;
+  }
 
-    &__tiles {
-        margin-top: 86px;
-        padding-bottom: 125px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        row-gap: 66px;
-    }
+  &__tiles {
+    padding-top: 86px;
+    padding-bottom: 125px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 66px;
 
-    &__client {
-        display: grid;
-        grid-template-columns: 170px 1fr;
+    @include breakpoint(md) {
+      grid-template-columns: 1fr;
     }
+  }
 
-    &__photo {
-        display: flex;
-        justify-self: center;
-        object-fit: contain;
-        margin-left: 20px;
-    }
+  &__client {
+    display: grid;
+    grid-template-columns: 170px 1fr;
 
-    &__quote {
-        margin: 0;
-        padding: 0 20px 0 10px;
+    @include breakpoint(sm) {
+      grid-template-columns: 1fr;
     }
+  }
 
-    &__name {
-        margin-top: 9px;
-        font: bold 14px/1.2 $montserrat-font;
-        color: #333333;
-        text-transform: uppercase;
-    }
+  &__photo {
+    display: flex;
+    justify-self: center;
+    object-fit: contain;
+    margin-left: 20px;
 
-    &__position {
-        margin-top: 7px;
-        font: italic 15px/1.6 $roboto-font;
-        color: #333333;
+    @include breakpoint(sm) {
+      margin-left: 0;
     }
+  }
 
-    &__underline {
-        margin-top: 14px;
-    }
+  &__quote {
+    margin: 0;
+    padding: 0 20px 0 10px;
+  }
 
-    &__paragraph {
-        margin: 19px 0 0;
-        font: 15px/1.6 $roboto-font;
-        color: #999999;
+  &__name {
+    margin-top: 9px;
+    font: bold 14px/1.2 $montserrat-font;
+    color: #333333;
+    text-transform: uppercase;
+
+    @include breakpoint(sm) {
+      text-align: center;
     }
+  }
+
+  &__position {
+    margin-top: 7px;
+    font: italic 15px/1.6 $roboto-font;
+    color: #333333;
+
+    @include breakpoint(sm) {
+      text-align: center;
+    }
+  }
+
+  &__underline {
+    margin-top: 14px;
+
+    @include breakpoint(sm) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__paragraph {
+    margin: 19px 0 0;
+    font: 15px/1.6 $roboto-font;
+    color: #999999;
+
+    @include breakpoint(sm) {
+      text-align: center;
+    }
+  }
 }

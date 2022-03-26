@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>MoGo</title>
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
-        />
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-        />
-        <link rel="stylesheet" href="./styles/main.min.css" />
-        <noscript>
-            <style>
-                .simplebar-content-wrapper {
-                    overflow: auto;
-                }
-            </style>
-        </noscript>
-    </head>
-    <body>
-        <div class="wrapper">
-            @@include('blocks/header/header.html')
-            <main class="main">
-                @@include('blocks/main-slider/main-slider.html')
-                @@include('blocks/story/story.html')
-                @@include('blocks/achievements/achievements.html')
-                @@include('blocks/overview/overview.html')
-                @@include('blocks/design/design.html')
-                @@include('blocks/service/service.html')
-                @@include('blocks/slider-1/slider-1.html')
-                @@include('blocks/team/team.html')
-                @@include('blocks/awards/awards.html')
-                @@include('blocks/work/work.html')
-                @@include('blocks/gallery/gallery.html')
-                @@include('blocks/slider-2/slider-2.html')
-                @@include('blocks/clients/clients.html')
-                @@include('blocks/blogs/blogs.html')
-                @@include('blocks/map/map.html')
-            </main>
-            @@include('blocks/footer/footer.html')
-        </div>
-        <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
-        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-        <script src="./js/app.min.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoGo</title>
+    <noscript>
+      <style>
+        .simplebar-content-wrapper {
+          overflow: auto;
+        }
+      </style>
+    </noscript>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.min.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('blocks/header/header.html')
+      <main class="main">
+        @@include('blocks/main-slider/main-slider.html')
+        @@include('blocks/story/story.html')
+        @@include('blocks/achievements/achievements.html')
+        @@include('blocks/overview/overview.html')
+        @@include('blocks/design/design.html')
+        @@include('blocks/service/service.html')
+        @@include('blocks/slider-1/slider-1.html')
+        @@include('blocks/team/team.html')
+        @@include('blocks/awards/awards.html')
+        @@include('blocks/work/work.html')
+        @@include('blocks/gallery/gallery.html')
+        @@include('blocks/slider-2/slider-2.html')
+        @@include('blocks/clients/clients.html')
+        @@include('blocks/blogs/blogs.html')
+        @@include('blocks/map/map.html')
+      </main>
+      @@include('blocks/footer/footer.html')
+    </div>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/app.min.js"></script>
+  </body>
 </html>

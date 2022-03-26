@@ -1,32 +1,41 @@
 .instagram-article {
-    &__heading {
-        margin: 0 0 37px;
-        font: 600 14px/1.2 $montserrat-font;
-        color: #333333;
-        text-transform: uppercase;
-    }
+  &__heading {
+    margin: 0 0 37px;
+    font: 600 14px/1.2 $montserrat-font;
+    color: #333333;
+    text-transform: uppercase;
+  }
 
-    &__photos {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 2px;
-    }
+  &__photos {
+    display: grid;
+    grid-template-columns: 88px 88px 88px;
+    gap: 2px;
+  }
 
-    &__photo {
-        display: block;
-    }
+  &__link {
+    transition: transform 0.5s ease;
 
-    &__more {
-        margin-top: 14px;
+    &:hover {
+      z-index: 1;
+      transform: scale(130%);
     }
+  }
 
-    &__link {
-        font: italic 300 13px/1 $roboto-font;
-        text-decoration: none;
-        color: #333333;
+  &__photo {
+    display: block;
+  }
 
-        &:hover {
-            color: #f38181;
-        }
+  &__more {
+    margin-top: 14px;
+  }
+
+  &__link {
+    font: italic 300 13px/1 $roboto-font;
+    text-decoration: none;
+    color: #333333;
+
+    &:hover {
+      color: #f38181;
     }
+  }
 }

@@ -1,23 +1,42 @@
 .service {
-    margin-top: 109px;
-    margin-bottom: 120px;
+  margin-top: 109px;
+  margin-bottom: 120px;
 
-    &__paragraph {
-        margin: 41px 0 0;
-        padding: 0 123px;
-        font: 15px/1.6 $roboto-font;
-        text-align: center;
-        color: #999999;
-    }
+  &__paragraph {
+    margin: 41px auto 0;
+    width: 80%;
+    font: 15px/1.6 $roboto-font;
+    text-align: center;
+    color: #999999;
 
-    &__tiles {
-        margin-top: 88px;
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    @include breakpoint(lg) {
+      width: 100%;
     }
+  }
 
-    &__img {
-        display: block;
+  &__tiles {
+    margin-top: 88px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+
+    @include breakpoint(xl) {
+      grid-template-columns: 1fr;
     }
+  }
+
+  &__img {
+    display: block;
+
+    @include breakpoint(xl) {
+      margin: 0 auto;
+    }
+    @include breakpoint(md) {
+      width: 470px;
+    }
+    @include breakpoint(sm) {
+      width: 330px;
+    }
+  }
 }

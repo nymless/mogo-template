@@ -1,70 +1,70 @@
 .social-networks {
-    &__heading {
-        margin: 0;
-        font: bold 46px/1.2 $montserrat-font;
-        color: #cccccc;
-    }
+  &__heading {
+    margin: 0;
+    font: bold 46px/1.2 $montserrat-font;
+    color: #cccccc;
+  }
 
-    &__paragraph {
-        margin: 24px 0 0;
-        font: 15px/1.6 $roboto-font;
-        color: #999999;
-    }
+  &__paragraph {
+    margin: 24px 0 0;
+    font: 15px/1.6 $roboto-font;
+    color: #999999;
+  }
 
-    &__followers {
-        margin-top: 20px;
-        padding-bottom: 14px;
-        font: 500 14px/1.2 $montserrat-font;
-        color: #333333;
-        border-bottom: 1px solid #e8e8e8;
-    }
+  &__followers {
+    margin-top: 20px;
+    padding-bottom: 14px;
+    font: 500 14px/1.2 $montserrat-font;
+    color: #333333;
+    border-bottom: 1px solid #e8e8e8;
+  }
 
-    &__followers-number {
-        font: bold 18px/1.2 $montserrat-font;
-    }
+  &__followers-number {
+    font: bold 18px/1.2 $montserrat-font;
+  }
 
-    &__follow-us {
-        margin-top: 13px;
-        font: italic 300 15px/1.6 $roboto-font;
-        color: #999999;
-        display: flex;
-        gap: 16px;
-        align-items: center;
-    }
+  &__follow-us {
+    margin-top: 13px;
+    font: italic 300 15px/1.6 $roboto-font;
+    color: #999999;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
 
-    &__link {
-        display: block;
-    }
+  &__link {
+    display: block;
+  }
 
-    &__link-icon {
-        display: block;
-    }
+  &__link-icon {
+    display: block;
+  }
 
-    &__subscribe {
-        margin-top: 33px;
-        height: 40px;
-        display: grid;
-        grid-template-columns: 230px 150px;
-    }
+  &__subscribe {
+    margin-top: 33px;
+    height: 40px;
+    display: grid;
+    grid-template-columns: 1fr 150px;
+  }
 
-    &__subscribe-input {
-        padding: 0 10px;
-        font: 15px/1.6 $roboto-font;
-        color: #333333;
-        border: 1px solid #e7e7e7;
+  &__subscribe-input {
+    padding: 0 10px;
+    font: 15px/1.6 $roboto-font;
+    color: #333333;
+    border: 1px solid #e7e7e7;
 
-        &::placeholder {
-            font-style: italic;
-            font-weight: 300;
-            color: #cccccc;
-        }
+    &::placeholder {
+      font-style: italic;
+      font-weight: 300;
+      color: #cccccc;
     }
+  }
 
-    &__subscribe-button {
-        border: none;
-        background-color: #95e1d3;
-        font: bold 14px/1.2 $montserrat-font;
-        text-transform: uppercase;
-        color: white;
-    }
+  &__subscribe-button {
+    border: none;
+    background-color: #95e1d3;
+    font: bold 14px/1.2 $montserrat-font;
+    text-transform: uppercase;
+    color: white;
+  }
 }

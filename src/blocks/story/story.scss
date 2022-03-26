@@ -1,81 +1,79 @@
 .story {
-    &__heading {
-        margin-top: 90px;
+  &__heading {
+    margin-top: 90px;
+  }
+
+  &__paragraph {
+    margin: 40px auto 0;
+    width: 80%;
+    font: 15px/1.6 $roboto-font;
+    text-align: center;
+    color: #999999;
+
+    @include breakpoint(lg) {
+      width: 100%;
     }
+  }
 
-    &__paragraph {
-        margin: 40px 0 0;
-        padding: 0 123px;
-        font: 15px/1.6 $roboto-font;
-        text-align: center;
-        color: #999999;
-    }
+  &__tiles {
+    margin-top: 97px;
+    margin-bottom: 110px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    &__tiles {
-        margin-top: 97px;
-        margin-bottom: 110px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
+  &__tile {
+    position: relative;
+    width: 380px;
+    height: 250px;
+    flex: 0 0 auto;
 
-        @include breakpoint(xl) {
-            gap: 30px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-    }
+    &:hover {
+      .story__tile-img {
+        transform: translate(-10px, -10px);
+        box-shadow: 10px 10px 0 #95e1d3;
+      }
 
-    &__tile {
-        position: relative;
-        width: 380px;
-        height: 250px;
-        flex: 0 0 auto;
+      .story__gradient {
+        transform: translate(-10px, -10px);
+        background: $hover-gradient;
+        opacity: 90%;
+      }
 
-        &:hover {
-            .story__tile-img {
-                transform: translate(-10px, -10px);
-                box-shadow: 10px 10px 0 #95e1d3;
-            }
-
-            .story__gradient {
-                transform: translate(-10px, -10px);
-                background: $hover-gradient;
-                opacity: 90%;
-            }
-
-            .story__tile-info {
-                display: block;
-            }
-        }
-
-
-    }
-
-    &__tile-img {
-        position: absolute;
+      .story__tile-info {
         display: block;
-        transition: all 0.5s ease;
+      }
     }
+  }
 
-    &__gradient {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        transition: all 0.5s ease;
-    }
+  &__tile-img {
+    position: absolute;
+    display: block;
+    transition: all 0.5s ease;
+  }
 
-    &__tile-info {
-        display: none;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -40%);
-        font: bold 18px/1.2 $montserrat-font;
-        color: white;
-    }
+  &__gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+  }
 
-    &__tile-icon {
-        display: block;
-        margin: 0 auto 8px;
-    }
+  &__tile-info {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    font: bold 18px/1.2 $montserrat-font;
+    color: white;
+  }
+
+  &__tile-icon {
+    display: block;
+    margin: 0 auto 8px;
+  }
 }

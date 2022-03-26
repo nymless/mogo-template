@@ -1,161 +1,212 @@
 .main-slider {
-    background: #f38181 url('../img/background-mogo-banner.png') center;
-    background-size: cover;
+  background: url('../img/banner/mogo-banner.png') center no-repeat,
+    $hover-gradient;
+  background-size: cover;
+  height: 100vh;
+  min-height: 700px;
+  padding-top: 58px;
 
-    &__wrapper {
-        padding-top: 162px;
-        overflow: hidden;
+  @include breakpoint(md) {
+    min-height: 600px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__inner {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__wrapper {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-bottom: 73px;
+  }
+
+  &__content {
+    display: inline-flex;
+
+    &-forward {
+      transform: translate(0);
+
+      &--next {
+        transition: transform ease 1s;
+        transform: translate(-50%);
+      }
     }
 
-    &__content {
-        display: inline-flex;
+    &-backward {
+      transform: translate(-50%);
 
-        &-forward {
-            transform: translate(0);
+      &--prev {
+        transition: transform ease 1s;
+        transform: translate(0);
+      }
+    }
+  }
 
-            &--next {
-                transition: transform ease 1s;
-                transform: translate(-50%);
-            }
-        }
+  &__slides {
+    display: none;
+  }
 
-        &-backward {
-            transform: translate(-50%);
+  &__slide {
+    padding: 0 150px;
+    width: 1230px;
 
-            &--prev {
-                transition: transform ease 1s;
-                transform: translate(0);
-            }
-        }
+    @include breakpoint(xl) {
+      padding: 0 100px;
+      width: 970px;
+    }
+    @include breakpoint(lg) {
+      padding: 0 100px;
+      width: 750px;
+    }
+    @include breakpoint(md) {
+      padding: 0 50px;
+      width: 500px;
+    }
+    @include breakpoint(sm) {
+      padding: 0 20px;
+      width: 360px;
+    }
+  }
+
+  &__header {
+    font: 72px/1.2 $kaushanScript-font;
+    color: white;
+    text-align: center;
+    padding-bottom: 30px;
+
+    @include breakpoint(xl) {
+      font-size: calc(72px / 1.2);
+    }
+    @include breakpoint(lg) {
+      font-size: calc(72px / 1.6);
+    }
+    @include breakpoint(md) {
+      font-size: calc(60px / 1.6);
+    }
+    @include breakpoint(sm) {
+      font-size: calc(60px / 1.6);
+    }
+  }
+
+  &__info {
+    font: bold 150px/0.933 $montserrat-font;
+    color: white;
+    text-align: center;
+
+    @include breakpoint(xl) {
+      font-size: calc(150px / 1.2);
+    }
+    @include breakpoint(lg) {
+      font-size: calc(150px / 1.6);
+    }
+    @include breakpoint(md) {
+      font-size: calc(120px / 1.6);
+    }
+    @include breakpoint(sm) {
+      font-size: calc(80px / 1.6);
+    }
+  }
+
+  &__underline {
+    margin: 0 auto;
+    flex: 0 0 auto;
+    margin-bottom: 50px;
+  }
+
+  &__more {
+    margin: 0 auto;
+    flex: 0 0 auto;
+    width: 160px;
+    height: 40px;
+    border: 3px solid white;
+    box-sizing: border-box;
+    font: bold 14px/1.2 $montserrat-font;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      border-color: #fce38a;
+      cursor: pointer;
+    }
+  }
+
+  &__paginator {
+    flex: 0 0 73px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    flex: 0 0 23%;
+    cursor: pointer;
+
+    @include breakpoint(md) {
+      flex: 0 0 48%;
     }
 
-    &__slides {
-        display: none;
+    &--active .main-slider__progress {
+      opacity: 100%;
     }
 
-    &__slide {
-        margin: 0 auto;
-        width: 1200px;
-
-        @include breakpoint(xl) {
-            width: 970px;
-        }
-        @include breakpoint(lg) {
-            width: 750px;
-        }
+    &--active .main-slider__bar {
+      transition: transform linear 10s;
+      transform: translate(0);
     }
 
-    &__inner {
-        padding: 0 100px;
+    &--active .main-slider__page {
+      opacity: 100%;
     }
+  }
 
-    &__header {
-        font: 72px/1.2 $kaushanScript-font;
-        color: white;
-        text-align: center;
+  &__progress {
+    height: 3px;
+    overflow: hidden;
+    background-color: white;
+    opacity: 50%;
+  }
 
-        @include breakpoint(xl) {
-            font-size: calc(72px / 1.2);
-        }
-        @include breakpoint(lg) {
-            font-size: calc(72px / 1.6);
-        }
+  &__bar {
+    height: 100%;
+    background-color: #f38181;
+    transform: translate(-100%);
+  }
+
+  &__bullet {
+    display: flex;
+    align-items: center;
+    height: 70px;
+  }
+
+  &__page {
+    font: 500 18px/1.2 $montserrat-font;
+    color: white;
+    opacity: 70%;
+
+    @include breakpoint(lg) {
+      font-size: calc(18px / 1.2);
     }
+  }
 
-    &__info {
-        margin-top: 35px;
-        font: bold 150px/0.933 $montserrat-font;
-        color: white;
-        text-align: center;
+  &__number {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.2;
 
-        @include breakpoint(xl) {
-            font-size: calc(150px / 1.2);
-        }
-        @include breakpoint(lg) {
-            font-size: calc(150px / 1.6);
-        }
+    @include breakpoint(lg) {
+      font-size: calc(24px / 1.2);
     }
-
-    &__underline {
-        margin: 48px auto 0;
-    }
-
-    &__more {
-        margin: 58px auto 0;
-        width: 160px;
-        height: 40px;
-        border: 3px solid white;
-        box-sizing: border-box;
-        font: bold 14px/1.2 $montserrat-font;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-
-        &:hover {
-            border-color: #fce38a;
-            cursor: pointer;
-        }
-    }
-
-    &__paginator {
-        margin-top: 157px;
-        height: 73px;
-        display: flex;
-        gap: 27px;
-        justify-content: space-between;
-    }
-
-    &__item {
-        width: 280px;
-        cursor: pointer;
-
-        &--active .main-slider__progress {
-            opacity: 100%;
-        }
-
-        &--active .main-slider__bar {
-            transition: transform linear 10s;
-            transform: translate(0);
-        }
-
-        &--active .main-slider__page {
-            opacity: 100%;
-        }
-    }
-
-    &__progress {
-        height: 3px;
-        overflow: hidden;
-        background-color: white;
-        opacity: 50%;
-    }
-
-    &__bar {
-        height: 100%;
-        background-color: #f38181;
-        transform: translate(-100%);
-    }
-
-    &__page {
-        font: 500 18px/1.2 $montserrat-font;
-        color: white;
-        opacity: 70%;
-        height: 100%;
-
-        @include breakpoint(lg) {
-            font-size: calc(18px / 1.2);
-        }
-    }
-
-    &__number {
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 1.2;
-
-        @include breakpoint(lg) {
-            font-size: calc(24px / 1.2);
-        }
-    }
+  }
 }

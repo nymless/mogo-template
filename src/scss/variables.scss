@@ -14,30 +14,30 @@ $h-color: #333333;
 $bg-gray: #f8f8f8;
 $bg-turquoise: #95e1d3;
 
-$sm: 479.98px;
-$md: 767.98px;
-$lg: 991.98px;
 $xl: 1228.98px;
+$lg: 991.98px;
+$md: 767.98px;
+$sm: 479.98px;
 
 @mixin breakpoint($point) {
-    @if $point == sm {
-        @media (max-width: $sm) {
-            @content;
-        }
+  @if $point == xl {
+    @media (max-width: $xl) {
+      @content;
     }
-    @if $point == md {
-        @media (max-width: $md) {
-            @content;
-        }
+  }
+  @if $point == lg {
+    @media (max-width: $lg) {
+      @content;
     }
-    @if $point == lg {
-        @media (max-width: $lg) {
-            @content;
-        }
+  }
+  @if $point == md {
+    @media (max-width: $md) {
+      @content;
     }
-    @if $point == xl {
-        @media (max-width: $xl) {
-            @content;
-        }
+  }
+  @if $point == sm {
+    @media (max-width: $sm) {
+      @content;
     }
+  }
 }

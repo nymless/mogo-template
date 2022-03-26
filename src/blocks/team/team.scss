@@ -1,145 +1,151 @@
 .team {
-    margin-bottom: 114px;
+  margin-bottom: 114px;
 
-    &__heading {
-        margin-top: 98px;
+  &__heading {
+    margin-top: 98px;
+  }
+
+  &__paragraph {
+    margin: 41px auto 0;
+    width: 80%;
+    font: 15px/1.6 $roboto-font;
+    text-align: center;
+    color: #999999;
+
+    @include breakpoint(lg) {
+      width: 100%;
     }
+  }
 
-    &__paragraph {
-        margin: 41px 0 0;
-        padding: 0 123px;
-        font: 15px/1.6 $roboto-font;
-        text-align: center;
-        color: #999999;
-    }
+  &__cards {
+    margin-top: 88px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
-    &__cards {
-        margin-top: 88px;
-        width: 100%;
+  &__card {
+    display: grid;
+    justify-items: center;
+  }
+
+  &__card-photo {
+    position: relative;
+
+    &:hover {
+      .team__card-img {
+        transform: translate(-10px, -10px);
+        box-shadow: 10px 10px 0 #95e1d3;
+      }
+
+      .team__card-gradient {
+        transform: translate(-10px, -10px);
+        background: $hover-gradient;
+        opacity: 90%;
+      }
+
+      .team__card-links {
         display: flex;
-        justify-content: space-between;
+      }
+    }
+  }
+
+  &__card-img {
+    display: block;
+    transition: all 0.5s ease;
+  }
+
+  &__card-gradient {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+  }
+
+  &__card-links {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-54%, -67%);
+  }
+
+  &__card-link {
+    width: 56px;
+    height: 56px;
+    display: block;
+    box-sizing: border-box;
+    background-color: #fce38a;
+
+    &:not(:last-child) {
+      border-right: #f38181 1px solid;
     }
 
-    &__card {
-        display: grid;
-        justify-items: center;
+    &--facebook {
+      background: #fce38a url('../img/team/team-facebook.png') center no-repeat;
+
+      &:hover {
+        background: #f38181 url('../img/team/team-facebook-hover.png') center
+          no-repeat;
+      }
     }
 
-    &__card-photo {
-        position: relative;
+    &--twitter {
+      background: #fce38a url('../img/team/team-twitter.png') center no-repeat;
 
-        &:hover {
-            .team__card-img {
-                transform: translate(-10px, -10px);
-                box-shadow: 10px 10px 0 #95e1d3;
-            }
-
-            .team__card-gradient {
-                transform: translate(-10px, -10px);
-                background: $hover-gradient;
-                opacity: 90%;
-            }
-
-            .team__card-links {
-                display: flex;
-            }
-        }
+      &:hover {
+        background: #f38181 url('../img/team/team-twitter-hover.png') center
+          no-repeat;
+      }
     }
 
-    &__card-img {
-        display: block;
+    &--pinterest {
+      background: #fce38a url('../img/team/team-pinterest.png') center no-repeat;
+
+      &:hover {
+        background: #f38181 url('../img/team/team-pinterest-hover.png') center
+          no-repeat;
+      }
     }
 
-    &__card-gradient {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
+    &--github {
+      background: #fce38a url('../img/team/team-github.png') center no-repeat;
+
+      &:hover {
+        background: #f38181 url('../img/team/team-github-hover.png') center
+          no-repeat;
+      }
     }
 
-    &__card-links {
-        display: none;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-54%, -67%);
+    &--instagram {
+      background: #fce38a url('../img/team/team-instagram.png') center no-repeat;
+
+      &:hover {
+        background: #f38181 url('../img/team/team-instagram-hover.png') center
+          no-repeat;
+      }
     }
+  }
 
-    &__card-link {
-        width: 56px;
-        height: 56px;
-        display: block;
-        box-sizing: border-box;
-        background-color: #fce38a;
+  &__card-info {
+    margin-top: 28px;
+  }
 
-        &:not(:last-child) {
-            border-right: #f38181 1px solid;
-        }
+  &__card-name {
+    text-align: center;
+    font: bold 14px/1.2 $montserrat-font;
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+  }
 
-        &--facebook {
-            background: #fce38a url("../img/team-facebook.png") center no-repeat;
-
-            &:hover {
-                background: #f38181 url("../img/team-facebook-hover.png") center
-                    no-repeat;
-            }
-        }
-
-        &--twitter {
-            background: #fce38a url("../img/team-twitter.png") center no-repeat;
-
-            &:hover {
-                background: #f38181 url("../img/team-twitter-hover.png") center
-                    no-repeat;
-            }
-        }
-
-        &--pinterest {
-            background: #fce38a url("../img/team-pinterest.png") center
-                no-repeat;
-
-            &:hover {
-                background: #f38181 url("../img/team-pinterest-hover.png")
-                    center no-repeat;
-            }
-        }
-
-        &--github {
-            background: #fce38a url("../img/team-github.png") center no-repeat;
-
-            &:hover {
-                background: #f38181 url("../img/team-github-hover.png") center
-                    no-repeat;
-            }
-        }
-
-        &--instagram {
-            background: #fce38a url("../img/team-instagram.png") center
-                no-repeat;
-
-            &:hover {
-                background: #f38181 url("../img/team-instagram-hover.png")
-                    center no-repeat;
-            }
-        }
-    }
-
-    &__card-info {
-        margin-top: 28px;
-    }
-
-    &__card-name {
-        text-align: center;
-        font: bold 14px/1.2 $montserrat-font;
-        color: rgb(51, 51, 51);
-        text-transform: uppercase;
-    }
-
-    &__card-position {
-        margin-top: 6px;
-        text-align: center;
-        font: italic 15px/1.6 $roboto-font;
-        color: rgb(153, 153, 153);
-    }
+  &__card-position {
+    margin-top: 6px;
+    text-align: center;
+    font: italic 15px/1.6 $roboto-font;
+    color: rgb(153, 153, 153);
+  }
 }

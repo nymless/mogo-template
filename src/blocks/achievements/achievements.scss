@@ -1,32 +1,38 @@
 .achievements {
-    background-color: $bg-turquoise;
+  background-color: $bg-turquoise;
 
-    &__container {
-        height: 270px;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-    }
+  &__inner {
+    padding: 70px 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 
-    &__achievement {
-        margin-top: 71px;
-        border-left: 1px solid rgba($color: white, $alpha: 0.3);
+.achievement {
+  flex: 1 0 240px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid rgba($color: white, $alpha: 0.3);
+  border-right: 1px solid rgba($color: white, $alpha: 0.3);
 
-        &:last-child {
-            border-right: 1px solid rgba($color: white, $alpha: 0.3);
-        }
-    }
+  &__inner {
+    padding-bottom: 15px;
+  }
 
-    &__number {
-        font: bold 72px/1.2 $montserrat-font;
-        color: white;
-        text-align: center;
-    }
+  &__number {
+    font: bold 72px/1.2 $montserrat-font;
+    color: white;
+    text-align: center;
+  }
 
-    &__description {
-        margin-top: 10px;
-        font: 500 14px/1.2 $montserrat-font;
-        color: white;
-        text-align: center;
-        text-transform: uppercase;
-    }
+  &__description {
+    margin-top: 10px;
+    font: 500 14px/1.2 $montserrat-font;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+  }
 }

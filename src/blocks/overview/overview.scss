@@ -1,50 +1,78 @@
 .overview {
-    margin-top: 108px;
+  margin-top: 108px;
 
-    &__tiles {
-        margin-top: 18px;
-        margin-bottom: 71px;
-        display: grid;
-        grid-template-rows: 169px 169px;
-        grid-template-columns: 1fr 1fr 1fr;
+  &__tiles {
+    margin-top: 18px;
+    margin-bottom: 71px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @include breakpoint(lg) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include breakpoint(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__tile {
+    height: 169px;
+    display: grid;
+    grid-template-areas:
+      'icon head'
+      'icon info';
+    grid-template-rows: 73px 1fr;
+    grid-template-columns: 90px 1fr;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ededed;
+
+    &:nth-last-child(3),
+    &:nth-last-child(2),
+    &:nth-last-child(1) {
+      border-bottom: none;
     }
 
-    &__tile {
-        display: grid;
-        grid-template-areas:
-            'icon head'
-            'icon info';
-        grid-template-rows: 73px 1fr;
-        grid-template-columns: 90px 1fr;
-        box-sizing: border-box;
-
-        &:nth-child(-n + 3) {
-            border-bottom: 1px solid #ededed;
-        }
+    @include breakpoint(lg) {
+      &:nth-last-child(3) {
+        border-bottom: 1px solid #ededed;
+      }
+      &:nth-last-child(2),
+      &:nth-last-child(1) {
+        border-bottom: none;
+      }
     }
-
-    &__tile-icon {
-        grid-area: icon;
-        display: block;
-        margin: 48px auto 0;
+    @include breakpoint(md) {
+      &:nth-last-child(2) {
+        border-bottom: 1px solid #ededed;
+      }
+      &:nth-last-child(1) {
+        border-bottom: none;
+      }
     }
+  }
 
-    &__tile-heading {
-        grid-area: head;
-        margin: 0;
-        margin-bottom: 11px;
-        display: flex;
-        align-items: flex-end;
-        font: 600 14px/1.2 $montserrat-font;
-        color: #333333;
-        text-transform: uppercase;
-    }
+  &__tile-icon {
+    grid-area: icon;
+    display: block;
+    margin: 48px auto 0;
+  }
 
-    &__tile-info {
-        grid-area: info;
-        margin: 0;
-        margin-right: 20px;
-        font: 15px/1.6 $roboto-font;
-        color: #999999;
-    }
+  &__tile-heading {
+    grid-area: head;
+    margin: 0;
+    margin-bottom: 11px;
+    display: flex;
+    align-items: flex-end;
+    font: 600 14px/1.2 $montserrat-font;
+    color: #333333;
+    text-transform: uppercase;
+  }
+
+  &__tile-info {
+    grid-area: info;
+    margin: 0;
+    margin-right: 20px;
+    font: 15px/1.6 $roboto-font;
+    color: #999999;
+  }
 }

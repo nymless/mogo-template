@@ -1,67 +1,93 @@
 .slider {
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__slide {
+    box-sizing: border-box;
+    padding: 0 70px;
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    gap: 80px;
+
+    @include breakpoint(xl) {
+      padding: 0 60px;
+      gap: 70px;
+      grid-template-columns: 200px 1fr;
+    }
+    @include breakpoint(lg) {
+      padding: 0 50px;
+      gap: 50px;
+      grid-template-columns: 150px 1fr;
+    }
+    @include breakpoint(md) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 150px 1fr;
+      padding: 0 40px;
+      gap: 30px;
+    }
+  }
+
+  &__quote {
+    margin: 4px 0 0;
+    display: grid;
+    align-self: center;
+  }
+
+  &__paragraph {
+    margin: 0;
+    font: italic 300 24px/1.5 $roboto-font;
+    color: #999999;
+
+    @include breakpoint(lg) {
+      font-size: 20px;
+    }
+  }
+
+  &__inner {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+  }
+
+  &__underline {
+    margin-top: 15px;
+  }
+
+  &__author {
+    font: 24px/1.2 $kaushanScript-font;
+    color: #333333;
+  }
+
+  &__photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__img {
     width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 
-    &__wrapper {
-        display: flex;
-        align-items: center;
-    }
+  // Swiper plugin classes
 
-    &__slide {
-        box-sizing: border-box;
-        padding: 0 70px 0 70px;
-        display: grid;
-        grid-template-columns: 230px 1fr;
-    }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    color: #cccccc;
+    font-size: 20px;
+    font-weight: 900;
+  }
 
-    &__quote {
-        margin: 4px 0 0;
-        padding-left: 20px;
-        display: grid;
-        align-self: center;
-    }
+  .swiper-button-prev {
+    margin-left: 6px;
+  }
 
-    &__paragraph {
-        margin: 0;
-        font: italic 300 24px/1.5 $roboto-font;
-        color: #999999;
-    }
-
-    &__inner {
-        margin-top: 15px;
-        display: flex;
-        gap: 10px;
-    }
-
-    &__underline {
-        margin-top: 15px;
-    }
-
-    &__author {
-        font: 24px/1.2 $kaushanScript-font;
-        color: #333333;
-    }
-
-    &__photo {
-        display: flex;
-        align-self: center;
-        justify-self: center;
-        object-fit: contain;
-    }
-
-    // Swiper plugin classes
-
-    .swiper-button-next::after,
-    .swiper-button-prev::after {
-        color: #cccccc;
-        font-size: 20px;
-        font-weight: 900;
-    }
-
-    .swiper-button-prev {
-        margin-left: 6px;
-    }
-
-    .swiper-button-next {
-        margin-right: 6px;
-    }
+  .swiper-button-next {
+    margin-right: 6px;
+  }
 }

@@ -1,97 +1,106 @@
 .menu {
+  &__body {
     display: flex;
-    justify-content: flex-end;
+    gap: 58px;
 
-    &__body {
-        @include breakpoint(md) {
-            position: fixed;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: black;
-            opacity: 0.8;
-            transition: left 0.3s ease;
-    
-            &--active {
-                left: 0;
-            }
-        }
+    @include breakpoint(lg) {
+      gap: 30px;
+    }
+  }
+
+  &__burger-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 58px;
+    font-size: 0.875rem;
+
+    @include breakpoint(lg) {
+      gap: 30px;
     }
 
-    &__list {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        display: flex;
-        gap: 58px;
-        justify-content: space-between;
-        align-content: center;
-
-        @include breakpoint(lg) {
-            gap: 30px;
-        }
-
-        @include breakpoint(md) {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 80px 0 30px;
-        }
+    @include breakpoint(md) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
-    &__item {
-        position: relative;
-        cursor: pointer;
+    @include breakpoint(md) {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      opacity: 0.8;
+      transition: left 0.3s ease;
 
-        &:hover {
-            .menu__link {
-                color: #fce38a;
-            }
-
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: -7px;
-                left: 0;
-                width: 100%;
-                height: 3px;
-                background-color: #fce38a;
-            }
-        }
+      &--active {
+        left: 0;
+        font-size: 2rem;
+      }
     }
+  }
 
-    &__link {
-        text-decoration: none;
-        font: 500 14px/1.2 $montserrat-font;
-        color: white;
-        text-transform: uppercase;
+  &__item {
+    position: relative;
+    cursor: pointer;
 
-        @media (max-width: 767.98px) {
-            font-size: 30px;
-        }
+    &:hover {
+      .menu__link {
+        color: #fce38a;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -7px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #fce38a;
+      }
     }
+  }
 
-    &__img-cart {
-        display: inline-block;
-        width: 18px;
-        height: 15px;
-        background: url('../img/menu-shopping-cart.png');
+  &__link {
+    font-weight: 500;
+    font-family: $montserrat-font;
+    color: white;
+    text-transform: uppercase;
+  }
 
-        &:hover {
-            background: url('../img/menu-shopping-cart-hover.png');
-        }
+  &__icos-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 58px;
+
+    @include breakpoint(lg) {
+      gap: 30px;
     }
+  }
 
-    &__img-search {
-        display: inline-block;
-        width: 18px;
-        height: 18px;
-        background: url('../img/menu-magnifying-glass.png');
+  &__img-cart {
+    display: inline-block;
+    width: 18px;
+    height: 15px;
+    background: url('../img/menu/shopping-cart.png');
 
-        &:hover {
-            background: url('../img/menu-magnifying-glass-hover.png');
-        }
+    &:hover {
+      background: url('../img/menu/shopping-cart-hover.png');
     }
+  }
+
+  &__img-search {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url('../img/menu/magnifying-glass.png');
+
+    &:hover {
+      background: url('../img/menu/magnifying-glass-hover.png');
+    }
+  }
 }

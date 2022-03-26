@@ -1,11 +1,16 @@
 .awards {
-    background-color: $bg-gray;
+  background-color: $bg-gray;
 
-    &__container {
-        height: 250px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 10px;
-    }
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 61px 0;
+  }
+
+  &__award {
+    display: block;
+    object-fit: none;
+  }
 }

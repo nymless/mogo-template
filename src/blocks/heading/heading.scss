@@ -1,20 +1,20 @@
 .heading {
-    &__2nd {
-        margin: 0;
-        font: 400 24px/1.2 $kaushanScript-font;
-        color: #333333;
-        text-align: center;
-    }
+  &__2nd {
+    margin: 0;
+    font: 400 24px/1.2 $kaushanScript-font;
+    color: #333333;
+    text-align: center;
+  }
 
-    &__3rd {
-        margin: 12px 0 0;
-        font: bold 30px/1.2 $montserrat-font;
-        color: #333333;
-        text-transform: uppercase;
-        text-align: center;
-    }
+  &__3rd {
+    margin: 12px 0 0;
+    font: bold 30px/1.2 $montserrat-font;
+    color: #333333;
+    text-transform: uppercase;
+    text-align: center;
+  }
 
-    &__underline {
-        margin: 35px auto 0;
-    }
+  &__underline {
+    margin: 35px auto 0;
+  }
 }
