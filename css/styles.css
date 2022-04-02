@@ -179,28 +179,6 @@ body {
   padding-right: 25px;
 }
 
-.awards {
-  background-color: #f8f8f8;
-}
-
-.awards__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  gap: 30px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 61px 0;
-}
-
-.awards__award {
-  display: block;
-  -o-object-fit: none;
-     object-fit: none;
-}
-
 .achievements {
   background-color: #95e1d3;
 }
@@ -249,6 +227,28 @@ body {
   color: white;
   text-align: center;
   text-transform: uppercase;
+}
+
+.awards {
+  background-color: #f8f8f8;
+}
+
+.awards__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 61px 0;
+}
+
+.awards__award {
+  display: block;
+  -o-object-fit: none;
+     object-fit: none;
 }
 
 .blogs__heading {
@@ -770,16 +770,14 @@ body {
 }
 
 .no-webp .main-slider{
-  background: url("../img/banner/banner.png") center no-repeat, -webkit-gradient(linear, left top, left bottom, from(#f38181), to(#fce38a));
-  background: url("../img/banner/banner.png") center no-repeat, -o-linear-gradient(#f38181, #fce38a);
-  background: url("../img/banner/banner.png") center no-repeat, linear-gradient(#f38181, #fce38a); }
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 129, 129, 0.9)), to(rgba(252, 227, 138, 0.9))), no-repeat center/cover url("../img/main-slider/picture.png");
+  background: -o-linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), no-repeat center/cover url("../img/main-slider/picture.png");
+  background: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), no-repeat center/cover url("../img/main-slider/picture.png"); }
 
 .main-slider {
-  background-size: cover;
   height: 100vh;
   min-height: 700px;
   padding-top: 58px;
-  position: relative;
 }
 
 .main-slider__container {
@@ -2016,7 +2014,7 @@ body {
 
 .webp .design{ background: #f8f8f8 url(../img/design/background-design.webp) center; }
 
-.webp .main-slider{ background: url(../img/banner/banner.webp) center no-repeat, -webkit-gradient(linear, left top, left bottom, from(#f38181), to(#fce38a)); background: url(../img/banner/banner.webp) center no-repeat, -o-linear-gradient(#f38181, #fce38a); background: url(../img/banner/banner.webp) center no-repeat, linear-gradient(#f38181, #fce38a); }
+.webp .main-slider{ background: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 129, 129, 0.9)), to(rgba(252, 227, 138, 0.9))), no-repeat center/cover url(../img/main-slider/picture.webp); background: -o-linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), no-repeat center/cover url(../img/main-slider/picture.webp); background: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), no-repeat center/cover url(../img/main-slider/picture.webp); }
 
 .webp .map{ background: #f8f8f8 url(../img/map/background-map.webp) center; }
 
