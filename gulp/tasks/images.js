@@ -1,5 +1,6 @@
 import webp from 'gulp-webp'
 import imagemin from 'gulp-imagemin'
+import imageminOptipng from 'imagemin-optipng'
 
 export const images = () => {
   return app.gulp
@@ -20,16 +21,9 @@ export const images = () => {
     .pipe(
       app.plugins.if(
         app.isBuild,
-        imagemin({
-          progressive: true,
-          svgoPlugins: [{ removeViewBox: false }],
-          interlaced: true,
-          optimizationLevel: 3,
-        })
+        imagemin([imageminOptipng({ optimizationLevel: 5 })])
       )
     )
-    .pipe(app.gulp.dest(app.path.build.images))
-    .pipe(app.gulp.src(app.path.src.svg))
     .pipe(app.gulp.dest(app.path.build.images))
     .pipe(app.plugins.browsersync.stream())
 }

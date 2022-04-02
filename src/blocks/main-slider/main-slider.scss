@@ -1,11 +1,10 @@
 .main-slider {
-  background: url('../img/banner/banner.png') center no-repeat,
-    $hover-gradient;
-  background-size: cover;
+  background:
+    linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)),
+    no-repeat center/cover url('../img/main-slider/picture.png');
   height: 100vh;
   min-height: 700px;
   padding-top: 58px;
-  position: relative;
 
   @include breakpoint(md) {
     min-height: 600px;
