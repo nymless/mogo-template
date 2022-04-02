@@ -179,6 +179,28 @@ body {
   padding-right: 25px;
 }
 
+.awards {
+  background-color: #f8f8f8;
+}
+
+.awards__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 61px 0;
+}
+
+.awards__award {
+  display: block;
+  -o-object-fit: none;
+     object-fit: none;
+}
+
 .achievements {
   background-color: #95e1d3;
 }
@@ -227,28 +249,6 @@ body {
   color: white;
   text-align: center;
   text-transform: uppercase;
-}
-
-.awards {
-  background-color: #f8f8f8;
-}
-
-.awards__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  gap: 30px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 61px 0;
-}
-
-.awards__award {
-  display: block;
-  -o-object-fit: none;
-     object-fit: none;
 }
 
 .blogs__heading {
@@ -557,7 +557,7 @@ body {
 
 .gallery {
   max-width: 1920px;
-  margin-top: 98px;
+  margin: 98px auto 0;
   -webkit-columns: 4;
      -moz-columns: 4;
           columns: 4;
@@ -770,15 +770,16 @@ body {
 }
 
 .no-webp .main-slider{
-  background: url("../img/banner/mogo-banner.png") center no-repeat, -webkit-gradient(linear, left top, left bottom, from(#f38181), to(#fce38a));
-  background: url("../img/banner/mogo-banner.png") center no-repeat, -o-linear-gradient(#f38181, #fce38a);
-  background: url("../img/banner/mogo-banner.png") center no-repeat, linear-gradient(#f38181, #fce38a); }
+  background: url("../img/banner/banner.png") center no-repeat, -webkit-gradient(linear, left top, left bottom, from(#f38181), to(#fce38a));
+  background: url("../img/banner/banner.png") center no-repeat, -o-linear-gradient(#f38181, #fce38a);
+  background: url("../img/banner/banner.png") center no-repeat, linear-gradient(#f38181, #fce38a); }
 
 .main-slider {
   background-size: cover;
   height: 100vh;
   min-height: 700px;
   padding-top: 58px;
+  position: relative;
 }
 
 .main-slider__container {
@@ -2015,7 +2016,7 @@ body {
 
 .webp .design{ background: #f8f8f8 url(../img/design/background-design.webp) center; }
 
-.webp .main-slider{ background: url(../img/banner/mogo-banner.webp) center no-repeat, -webkit-gradient(linear, left top, left bottom, from(#f38181), to(#fce38a)); background: url(../img/banner/mogo-banner.webp) center no-repeat, -o-linear-gradient(#f38181, #fce38a); background: url(../img/banner/mogo-banner.webp) center no-repeat, linear-gradient(#f38181, #fce38a); }
+.webp .main-slider{ background: url(../img/banner/banner.webp) center no-repeat, -webkit-gradient(linear, left top, left bottom, from(#f38181), to(#fce38a)); background: url(../img/banner/banner.webp) center no-repeat, -o-linear-gradient(#f38181, #fce38a); background: url(../img/banner/banner.webp) center no-repeat, linear-gradient(#f38181, #fce38a); }
 
 .webp .map{ background: #f8f8f8 url(../img/map/background-map.webp) center; }
 
