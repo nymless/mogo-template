@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "gulp",
